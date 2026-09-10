@@ -1,0 +1,118 @@
+[
+    {
+        "IdMunicipio": "Acanceh",
+        "NombreMunicipio": "Acanceh"
+    },
+    {
+        "IdMunicipio": "Akil",
+        "NombreMunicipio": "Akil"
+    },
+    {
+        "IdMunicipio": "Baca",
+        "NombreMunicipio": "Baca"
+    },
+    {
+        "IdMunicipio": "Chemax",
+        "NombreMunicipio": "Chemax"
+    },
+    {
+        "IdMunicipio": "Chichimil\u00e1",
+        "NombreMunicipio": "Chichimil\u00e1"
+    },
+    {
+        "IdMunicipio": "Conkal",
+        "NombreMunicipio": "Conkal"
+    },
+    {
+        "IdMunicipio": "Dzidzant\u00fan",
+        "NombreMunicipio": "Dzidzant\u00fan"
+    },
+    {
+        "IdMunicipio": "Espita",
+        "NombreMunicipio": "Espita"
+    },
+    {
+        "IdMunicipio": "Halach\u00f3",
+        "NombreMunicipio": "Halach\u00f3"
+    },
+    {
+        "IdMunicipio": "Hunucm\u00e1",
+        "NombreMunicipio": "Hunucm\u00e1"
+    },
+    {
+        "IdMunicipio": "Izamal",
+        "NombreMunicipio": "Izamal"
+    },
+    {
+        "IdMunicipio": "Kanas\u00edn",
+        "NombreMunicipio": "Kanas\u00edn"
+    },
+    {
+        "IdMunicipio": "Maxcan\u00fa",
+        "NombreMunicipio": "Maxcan\u00fa"
+    },
+    {
+        "IdMunicipio": "M\u00e9rida",
+        "NombreMunicipio": "M\u00e9rida"
+    },
+    {
+        "IdMunicipio": "Motul",
+        "NombreMunicipio": "Motul"
+    },
+    {
+        "IdMunicipio": "Muna",
+        "NombreMunicipio": "Muna"
+    },
+    {
+        "IdMunicipio": "Oxkutzcab",
+        "NombreMunicipio": "Oxkutzcab"
+    },
+    {
+        "IdMunicipio": "Peto",
+        "NombreMunicipio": "Peto"
+    },
+    {
+        "IdMunicipio": "Progreso",
+        "NombreMunicipio": "Progreso"
+    },
+    {
+        "IdMunicipio": "Sey\u00e9",
+        "NombreMunicipio": "Sey\u00e9"
+    },
+    {
+        "IdMunicipio": "Tecoh",
+        "NombreMunicipio": "Tecoh"
+    },
+    {
+        "IdMunicipio": "Tekax",
+        "NombreMunicipio": "Tekax"
+    },
+    {
+        "IdMunicipio": "Temoz\u00f3n",
+        "NombreMunicipio": "Temoz\u00f3n"
+    },
+    {
+        "IdMunicipio": "Ticul",
+        "NombreMunicipio": "Ticul"
+    },
+    {
+        "IdMunicipio": "Tixkokob",
+        "NombreMunicipio": "Tixkokob"
+    },
+    {
+        "IdMunicipio": "Tizim\u00edn",
+        "NombreMunicipio": "Tizim\u00edn"
+    },
+    {
+        "IdMunicipio": "Tzucacab",
+        "NombreMunicipio": "Tzucacab"
+    },
+    {
+        "IdMunicipio": "Um\u00e1n",
+        "NombreMunicipio": "Um\u00e1n"
+    },
+    {
+        "IdMunicipio": "Valladolid",
+        "NombreMunicipio": "Valladolid"
+    }
+]
