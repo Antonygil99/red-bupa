@@ -1,48 +1,61 @@
 ---
-import '@fontsource-variable/manrope';
+import '@fontsource-variable/plus-jakarta-sans';
 import '../styles/global.css';
+import IconSprite from '../components/IconSprite.astro';
+import directory from '../data/directory.json';
 ---
 <!doctype html>
 <html lang="es-MX">
- <head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="theme-color" content="#172923"/><meta name="description" content="Encuentra pediatras en Mérida. Explora consultorios, horarios y teléfonos cerca de tu ubicación."/><title>Cerca · Pediatras en Mérida</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"/></head>
+ <head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="theme-color" content="#111f33"/><meta name="description" content="Directorio médico de la red en Mérida: pediatría, medicina general, hospitales y laboratorios cerca de tu ubicación."/><title>myhealth · Directorio médico en Mérida</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"/></head>
  <body>
-  <svg class="svg-defs" aria-hidden="true"><defs>
-   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
-   <symbol id="i-cross" viewBox="0 0 24 24"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6Z"/></symbol>
-   <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
-   <symbol id="i-locate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 1v4m0 14v4M1 12h4m14 0h4"/></symbol>
-   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
-   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
-   <symbol id="i-phone" viewBox="0 0 24 24"><path d="m5 3 4 1 1 5-3 2c2 3 3 4 6 6l2-3 5 1 1 4c-1 5-9 1-13-3S0 4 5 3Z"/></symbol>
-   <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
-   <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-11v1"/></symbol>
-  </defs></svg>
-  <div class="app-shell">
-   <aside class="sidebar">
-    <header class="brand-row"><a class="brand" href="/" aria-label="Cerca, inicio"><span class="brand-icon"><svg><use href="#i-cross"/></svg></span>cerca<span class="brand-dot">.</span></a><span class="local-tag">HECHO PARA MÉRIDA</span></header>
-    <div class="intro"><div class="eyebrow">SU BIENESTAR, MÁS CERCA</div><h1>Un pediatra.<br/>Cerca de ti.</h1><p>Encuentra el próximo lugar<br/>para cuidar de los que más quieres.</p></div>
-    <div class="location-box"><svg><use href="#i-pin"/></svg><div><span>ESTÁS EXPLORANDO</span><strong id="location-label">Mérida, Yucatán</strong></div><button id="sidebar-locate" class="icon-button" aria-label="Usar mi ubicación"><svg><use href="#i-locate"/></svg></button></div>
-    <label class="search-field"><svg><use href="#i-search"/></svg><input id="search" type="search" placeholder="Nombre o colonia" aria-label="Buscar por nombre o colonia" autocomplete="off"/></label>
-    <div class="filters"><span class="specialty-chip"><svg><use href="#i-cross"/></svg>Pediatría</span><button id="schedule-filter" class="filter-chip" aria-pressed="false"><svg><use href="#i-clock"/></svg>En horario</button></div>
-    <div class="radius-row"><label for="radius">Distancia</label><select id="radius" aria-describedby="radius-help"><option value="all">Todo Mérida</option><option value="2">A 2 km de mí</option><option value="5">A 5 km de mí</option><option value="10">A 10 km de mí</option></select></div>
-    <p id="radius-help" class="quiet-note">Activa tu ubicación para calcular distancias.</p>
-    <div class="results-heading"><h2 id="result-count">Pediatras en Mérida</h2><span id="sort-label">A–Z</span></div>
-    <div id="results" class="results" aria-label="Resultados de pediatras"></div>
-    <footer class="sidebar-footer"><svg><use href="#i-info"/></svg><span>Directorio de consulta.<br/>Confirma la atención por teléfono.</span><span class="footer-mark">c.</span></footer>
+  <div id="loader" class="loader" role="status" aria-live="polite">
+   <img src="/loader_logo.svg" alt="myhealth" width="101" height="24" class="loader-logo"/>
+   <span class="loader-bar"><span></span></span>
+   <span class="loader-text">Preparando la red de Mérida…</span>
+  </div>
+  <IconSprite />
+  <div class="app-shell" id="app-shell">
+   <aside class="sidebar" id="sidebar">
+    <header class="brand-row">
+     <a class="brand" href="/" aria-label="myhealth, inicio"><img src="/span-brand.svg" alt="myhealth" width="83" height="25" decoding="async"/></a>
+     <button id="collapse-sidebar" class="icon-button rail-toggle" aria-label="Contraer panel" aria-expanded="true" aria-controls="sidebar"><svg><use href="#i-collapse"/></svg></button>
+    </header>
+    <div class="rail" aria-hidden="true">
+     <button class="icon-button" data-expand="search" aria-label="Abrir búsqueda"><svg><use href="#i-search"/></svg></button>
+     <button class="icon-button" data-expand="categories" aria-label="Abrir categorías"><svg><use href="#i-category"/></svg></button>
+     <button class="icon-button" data-expand="radius" aria-label="Abrir distancia"><svg><use href="#i-locate"/></svg></button>
+    </div>
+    <div class="sidebar-body">
+     <div class="location-box"><svg><use href="#i-pin"/></svg><div><span>ESTÁS EXPLORANDO</span><strong id="location-label">Mérida, Yucatán</strong></div><button id="sidebar-locate" class="icon-button" aria-label="Usar mi ubicación"><svg><use href="#i-locate"/></svg></button></div>
+     <div class="controls">
+      <div class="radius-row"><label for="radius">Distancia</label><output id="radius-value" for="radius">Todo Mérida</output></div>
+      <input id="radius" class="radius-slider" type="range" min="0" max="4" step="1" value="4" list="radius-stops" aria-describedby="radius-help"/>
+      <datalist id="radius-stops"><option value="0" label="1 km"></option><option value="1" label="2 km"></option><option value="2" label="5 km"></option><option value="3" label="10 km"></option><option value="4" label="Todo"></option></datalist>
+      <button id="schedule-filter" class="filter-chip schedule-chip" aria-pressed="false"><svg><use href="#i-clock"/></svg>Abierto ahora</button>
+      <p id="radius-help" class="quiet-note">Activa tu ubicación para calcular distancias.</p>
+     </div>
+    </div>
+    <div class="results-heading"><h2 id="result-count">Proveedores en Mérida</h2><span id="sort-label">A–Z</span></div>
+    <div id="results" class="results" aria-label="Resultados del directorio"></div>
+    <footer class="sidebar-footer"><svg><use href="#i-info"/></svg><span>Directorio de consulta. Confirma por teléfono.</span><img class="footer-mark" src="/span-footer-mark.svg" alt="" width="40" height="33" decoding="async"/></footer>
    </aside>
-   <main class="map-panel" aria-label="Mapa de consultorios de pediatría">
+   <main class="map-panel" aria-label="Mapa de la red médica">
     <div id="map" aria-label="Mapa interactivo de Mérida"></div>
-    <div class="map-top"><div class="map-heading"><span class="map-heading-icon"><svg><use href="#i-pin"/></svg></span><div><strong>Mérida</strong><span>Yucatán, México</span></div><span class="map-divider"></span><span class="map-specialty">Pediatría</span></div><button class="help-button" id="help-button" aria-label="Cómo funciona Cerca"><svg><use href="#i-info"/></svg></button></div>
+    <div class="map-top"><button class="help-button" id="help-button" aria-label="Cómo funciona myhealth"><svg><use href="#i-info"/></svg></button></div>
     <div class="map-message" id="map-message" hidden><span>El mapa no está disponible. Puedes seguir consultando la lista.</span><button id="retry-map">Reintentar</button></div>
     <div class="map-controls"><button id="zoom-in" aria-label="Acercar mapa">+</button><button id="zoom-out" aria-label="Alejar mapa">−</button><span></span><button id="map-locate" aria-label="Centrar en mi ubicación"><svg><use href="#i-locate"/></svg></button></div>
-    <div id="location-prompt" class="location-prompt"><div class="prompt-icon"><svg><use href="#i-locate"/></svg></div><div class="prompt-copy"><span class="eyebrow">EMPECEMOS CERCA DE TI</span><h2>El cuidado empieza aquí.</h2><p>Permite tu ubicación para encontrar<br class="desktop-break"/> pediatras cerca y conocer la distancia.</p><button id="enable-location" class="primary-button">Usar mi ubicación<svg><use href="#i-arrow"/></svg></button><button id="explore" class="text-button">Explorar Mérida por ahora</button><small>Tu ubicación se usa solo durante esta visita.</small></div></div>
-    <section id="detail" class="detail-card" aria-label="Detalle del pediatra" hidden></section>
-    <div class="map-bottom"><span><span class="legend-dot"></span> Consultorios de pediatría</span><span id="map-count">6 ubicaciones en el mapa</span></div>
+    <div id="location-prompt" class="location-prompt"><div class="prompt-icon"><svg><use href="#i-locate"/></svg></div><div class="prompt-copy"><h2>El cuidado empieza aquí.</h2><p>Permite tu ubicación para ver la red cerca y su distancia.</p><button id="enable-location" class="primary-button">Usar mi ubicación<svg><use href="#i-arrow"/></svg></button><button id="explore" class="text-button">Explorar Mérida por ahora</button><small>Guardamos tu última ubicación en este dispositivo para no volver a preguntarte.</small></div></div>
+    <section id="detail" class="detail-card" aria-label="Detalle del proveedor" hidden></section>
+    <div class="map-bottom"><span class="map-legend" id="map-legend"></span><span id="map-count">0 ubicaciones en el mapa</span></div>
    </main>
+   <div class="search-overlay" id="search-overlay">
+    <label class="search-field"><svg><use href="#i-search"/></svg><input id="search" type="search" placeholder="Nombre, colonia o servicio" aria-label="Buscar por nombre, colonia o servicio" autocomplete="off"/></label>
+    <div class="filters" id="categories" role="group" aria-label="Tipo de servicio"></div>
+   </div>
   </div>
-  <div class="mobile-tabs" role="group" aria-label="Vista"><button id="show-list" aria-pressed="true">Lista de pediatras</button><button id="show-map" aria-pressed="false"><svg><use href="#i-pin"/></svg>Ver mapa</button></div>
+  <div class="mobile-tabs" role="group" aria-label="Vista"><button id="show-list" aria-pressed="true">Lista</button><button id="show-map" aria-pressed="false"><svg><use href="#i-pin"/></svg>Mapa</button></div>
   <div id="toasts" class="toasts" role="status" aria-live="polite" aria-atomic="false"></div>
-  <dialog id="help-dialog"><button id="close-help" class="dialog-close icon-button" aria-label="Cerrar ayuda"><svg><use href="#i-close"/></svg></button><span class="eyebrow">CONOCE CERCA</span><h2>Encuentra. Ubica. Contacta.</h2><p>Explora los pediatras del directorio de Mérida, selecciona un perfil y consulta sus datos de contacto.</p><p>Si compartes tu ubicación, ordenamos por cercanía. Las distancias son en línea recta, no tiempos de viaje. El mapa se mantiene en la zona de Mérida.</p><p>Los horarios provienen del directorio y no garantizan atención. La actividad de los perfiles está pendiente de confirmar; no hay agenda de citas en línea.</p><p>Tu ubicación no se guarda. El mapa carga cartografía externa; al abrir indicaciones, Google Maps recibe el destino y, si la autorizaste, tu ubicación.</p><button id="got-it" class="primary-button">Entendido</button></dialog>
+  <dialog id="help-dialog"><button id="close-help" class="dialog-close icon-button" aria-label="Cerrar ayuda"><svg><use href="#i-close"/></svg></button><span class="eyebrow">CONOCE MYHEALTH</span><h2>Encuentra. Ubica. Contacta.</h2><p>Explora la red médica de Mérida por categoría —pediatría, medicina general, hospitales, laboratorios y farmacias—, selecciona un perfil y consulta sus datos de contacto.</p><p>Si compartes tu ubicación, ordenamos por cercanía y la guardamos en este dispositivo para no volver a preguntarte. Las distancias de la lista son en línea recta; «Cómo llegar» traza la ruta sobre el mapa.</p><p>Los horarios provienen del directorio y no garantizan atención. La mayoría de los perfiles tiene la actividad pendiente de confirmar y no hay agenda de citas en línea.</p><p class="dialog-notice">{directory.notice}</p><button id="got-it" class="primary-button">Entendido</button></dialog>
   <noscript><div class="noscript">Activa JavaScript para consultar el mapa y el directorio.</div></noscript>
   <script>import '../scripts/app';</script>
  </body>

@@ -1,4 +1,32 @@
 {
+  "notice": "En caso de no encontrar el proveedor médico en el municipio que requieras el servicio, favor de comunicarte al teléfono: 55 6826 9292 en caso de contar con un plan Médica Vital o Médica Vital PYME o al 55 6826 9296 en caso de contar con un plan Bupa Nacional Vital o Bupa Óptimo Empresarial.",
+  "categories": [
+    {
+      "id": "pediatria",
+      "label": "Pediatría",
+      "count": 7
+    },
+    {
+      "id": "medicina-general",
+      "label": "Medicina general",
+      "count": 9
+    },
+    {
+      "id": "hospital",
+      "label": "Hospitales",
+      "count": 8
+    },
+    {
+      "id": "laboratorio",
+      "label": "Laboratorios",
+      "count": 11
+    },
+    {
+      "id": "farmacia",
+      "label": "Farmacias",
+      "count": 116
+    }
+  ],
   "municipalities": [
     {
       "id": "Acanceh",
@@ -118,11 +146,16 @@
     }
   ],
   "specialties": [
-    "Pediatría"
+    "Pediatría",
+    "Medicina General o Familiar",
+    "Hospital",
+    "Laboratorio",
+    "FARMACIAS EN GENERAL"
   ],
   "providers": [
     {
       "id": "05711193",
+      "category": "pediatria",
       "name": "Rodrigo García Pérez",
       "neighborhood": "Mérida Centro",
       "address": "C. 54 entre Avenida Pérez Ponce y Calle No. 365 Int. 201",
@@ -141,6 +174,7 @@
         "lng": -89.616337
       },
       "coordinateIssue": null,
+      "photo": "/fotos/05711193.png",
       "schedule": [
         null,
         "16:00-20:00",
@@ -156,6 +190,7 @@
     },
     {
       "id": "05717825",
+      "category": "pediatria",
       "name": "Pedro Adrián Euán Chalé",
       "neighborhood": "García Ginerés",
       "address": "C. 32 No. 242 Int. 322",
@@ -174,6 +209,7 @@
         "lng": -89.6384
       },
       "coordinateIssue": null,
+      "photo": null,
       "schedule": [
         "08:00-14:00",
         "08:00-14:00",
@@ -189,6 +225,7 @@
     },
     {
       "id": "05703220",
+      "category": "pediatria",
       "name": "Mónica Trujillo Salazar",
       "neighborhood": "Las Américas",
       "address": "C. 74 Entre 63 y 65 No. 411",
@@ -207,6 +244,7 @@
         "lng": -89.6452471
       },
       "coordinateIssue": null,
+      "photo": null,
       "schedule": [
         "16:00-18:00",
         "16:00-18:00",
@@ -222,6 +260,7 @@
     },
     {
       "id": "05695317",
+      "category": "pediatria",
       "name": "Andrea Catalina Enriquez Castillo",
       "neighborhood": "Altabrisa",
       "address": "C. 26 No. 199 Int. Cons. 602",
@@ -240,6 +279,7 @@
         "lng": -89.5875506
       },
       "coordinateIssue": null,
+      "photo": "/fotos/05695317.png",
       "schedule": [
         "07:00-13:30",
         "07:00-13:30",
@@ -255,6 +295,7 @@
     },
     {
       "id": "05702224",
+      "category": "pediatria",
       "name": "Eric Israel Gutiérrez Juárez",
       "neighborhood": "Los Pinos",
       "address": "C. 40B Entre 27 y 29 No. 517",
@@ -273,6 +314,7 @@
         "lng": -89.5771876
       },
       "coordinateIssue": null,
+      "photo": null,
       "schedule": [
         null,
         "16:30-19:30",
@@ -288,6 +330,7 @@
     },
     {
       "id": "05708753",
+      "category": "pediatria",
       "name": "Juan Pablo López Herrera",
       "neighborhood": "Mérida Centro",
       "address": "C. 54 No. 365 Int. 308",
@@ -306,6 +349,7 @@
         "lng": -89.6187269
       },
       "coordinateIssue": null,
+      "photo": "/fotos/05708753.png",
       "schedule": [
         "09:00-13:30 Y 16:00-18:30",
         "09:00-13:30",
@@ -321,6 +365,7 @@
     },
     {
       "id": "05709474",
+      "category": "pediatria",
       "name": "Lidia Carolina Chavez Cordova",
       "neighborhood": "Francisco de Montejo",
       "address": "C. 61 x 44 y 46 No. 239",
@@ -336,6 +381,7 @@
         "lng": -89.6280803
       },
       "coordinateIssue": "Las coordenadas del archivo están fuera de la zona de Mérida.",
+      "photo": null,
       "schedule": [
         "16:00-19:00",
         null,
@@ -344,6 +390,5040 @@
         null,
         "16:30-18:30",
         null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05690412",
+      "category": "medicina-general",
+      "name": "Fátima Evangelina Esquivel Couoh",
+      "neighborhood": "La Huerta",
+      "address": "C. 54 No. 364 Piso 1 Cons. B3 Grupo Medico Las Americas",
+      "postalCode": "97080",
+      "municipality": "Mérida",
+      "specialty": "Medicina General o Familiar",
+      "phone": "9999261414",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9832948,
+        "lng": -89.6156986
+      },
+      "originalCoordinates": {
+        "lat": 20.9832948,
+        "lng": -89.6156986
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "14:30-20:00",
+        "14:30-20:00",
+        "14:30-20:00",
+        "14:30-20:00",
+        "14:30-20:00",
+        null,
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05699509",
+      "category": "medicina-general",
+      "name": "Natalia Maria Borges Perez",
+      "neighborhood": "Residencial Pension",
+      "address": "C. 15 x 58 y 60 No. 490",
+      "postalCode": "97217",
+      "municipality": "Mérida",
+      "specialty": "Medicina General o Familiar",
+      "phone": "9997923272",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9951917,
+        "lng": -89.6534179
+      },
+      "originalCoordinates": {
+        "lat": 20.9951917,
+        "lng": -89.6534179
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "09:30-13:30 Y 16:00-19:30",
+        "09:30-13:30 Y 16:00-19:30",
+        "09:30-13:30 Y 16:00-19:30",
+        "09:30-13:30 Y 16:00-19:30",
+        "09:30-13:30 Y 16:00-19:30",
+        "09:30-13:00",
+        null
+      ],
+      "active": true,
+      "bookingEnabled": true,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05708435",
+      "category": "medicina-general",
+      "name": "Roberto Medina Sosa",
+      "neighborhood": "Francisco de Montejo",
+      "address": "C. 50 x 43 y 45 No. 171 Int.3 Int. Consultorio 2",
+      "postalCode": "97203",
+      "municipality": "Mérida",
+      "specialty": "Medicina General o Familiar",
+      "phone": "9983858904",
+      "secondaryPhone": "9983858904",
+      "price": null,
+      "coordinates": {
+        "lat": 20.9956989,
+        "lng": -89.6369146
+      },
+      "originalCoordinates": {
+        "lat": 20.9956989,
+        "lng": -89.6369146
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "07:00-21:00",
+        "07:00-21:00",
+        "07:00-21:00",
+        "07:00-21:00",
+        "07:00-21:00",
+        "07:00-21:00",
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05693594",
+      "category": "medicina-general",
+      "name": "Francisco Santos Rendón",
+      "neighborhood": "Francisco de Montejo",
+      "address": "C. 50 x 61 y 57A No. 462",
+      "postalCode": "97203",
+      "municipality": "Mérida",
+      "specialty": "Medicina General o Familiar",
+      "phone": "9991652933",
+      "secondaryPhone": "9994016831",
+      "price": null,
+      "coordinates": {
+        "lat": 21.0242053,
+        "lng": -89.6517785
+      },
+      "originalCoordinates": {
+        "lat": 21.0242053,
+        "lng": -89.6517785
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "08:00-12:00 Y 21:00-22:30",
+        "08:00-12:00 Y 21:00-22:30",
+        "08:00-12:00 Y 21:00-22:30",
+        "08:00-12:00 Y 21:00-22:30",
+        "08:00-12:00 Y 21:00-22:30",
+        "08:00-15:00",
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05689406",
+      "category": "medicina-general",
+      "name": "Eduardo Lizarraga Navarrete",
+      "neighborhood": "Mérida Centro",
+      "address": "C. 54 x 33A Esquina No. 364T",
+      "postalCode": "97000",
+      "municipality": "Mérida",
+      "specialty": "Medicina General o Familiar",
+      "phone": "9999261414",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9841512,
+        "lng": -89.6186464
+      },
+      "originalCoordinates": {
+        "lat": 20.9841512,
+        "lng": -89.6186464
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "09:00-13:00 Y 17:00-20:00",
+        "09:00-13:00 Y 17:00-20:00",
+        "09:00-13:00 Y 17:00-20:00",
+        "09:00-13:00 Y 17:00-20:00",
+        "09:00-13:00 Y 17:00-20:00",
+        "09:00-13:00",
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05689481",
+      "category": "medicina-general",
+      "name": "Grissel Díaz Tun",
+      "neighborhood": "Mérida Centro",
+      "address": "C. 54 x 33-A esquina. Col. Centro No. 364-T Int. Consultorio B3, primer piso",
+      "postalCode": "97000",
+      "municipality": "Mérida",
+      "specialty": "Medicina General o Familiar",
+      "phone": "9999261414",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.984364,
+        "lng": -89.6164304
+      },
+      "originalCoordinates": {
+        "lat": 20.984364,
+        "lng": -89.6164304
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "08:00-13:00",
+        "08:00-13:00",
+        "08:00-13:00",
+        "08:00-13:00",
+        "08:00-13:00",
+        null,
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "00043516",
+      "category": "medicina-general",
+      "name": "César Edwin de Guadalupe Pérez Segovia",
+      "neighborhood": "Mérida Centro",
+      "address": "C. 57 entre 44 y 46 No. 417",
+      "postalCode": "97000",
+      "municipality": "Mérida",
+      "specialty": "Medicina General o Familiar",
+      "phone": "9999283543",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.96843,
+        "lng": -89.612897
+      },
+      "originalCoordinates": {
+        "lat": 20.96843,
+        "lng": -89.612897
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "09:00-13:00 Y 18:00-20:00",
+        "09:00-13:00 Y 18:00-20:00",
+        "09:00-13:00",
+        "09:00-13:00 Y 18:00-20:00",
+        "09:00-13:00 Y 18:00-20:00",
+        "10:00-12:30",
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05555213",
+      "category": "medicina-general",
+      "name": "Gloria María De Jesús Barrera Puerto",
+      "neighborhood": "La Huerta",
+      "address": "C. 33 B No. 460 E X 50 y 52",
+      "postalCode": "97080",
+      "municipality": "Mérida",
+      "specialty": "Medicina General o Familiar",
+      "phone": "9992872565",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9826855,
+        "lng": -89.6131491
+      },
+      "originalCoordinates": {
+        "lat": 20.9826855,
+        "lng": -89.6131491
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "12:00-16:00",
+        "12:00-16:00",
+        "12:00-16:00",
+        "12:00-16:00",
+        "12:00-16:00",
+        null,
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": true
+    },
+    {
+      "id": "05420202",
+      "category": "medicina-general",
+      "name": "Jorge Alberto Fonz Aguilar",
+      "neighborhood": "Mérida Centro",
+      "address": "Av. Vialidad 33 A No. 506 K Int. Loc. 13",
+      "postalCode": "97000",
+      "municipality": "Mérida",
+      "specialty": "Medicina General o Familiar",
+      "phone": "9999202512",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9849243,
+        "lng": -89.6250078
+      },
+      "originalCoordinates": {
+        "lat": 20.9849243,
+        "lng": -89.6250078
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "09:00-12:00 Y 17:00-19:45",
+        "09:00-12:00 Y 17:00-19:45",
+        "09:00-12:00 Y 17:00-19:45",
+        "09:00-12:00 Y 17:00-19:45",
+        "09:00-12:00 Y 17:00-19:45",
+        "09:00-11:00",
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05220513",
+      "category": "hospital",
+      "name": "Oncología Radiante",
+      "neighborhood": "Maya",
+      "address": "C. 21 x 24 y 28 No. 588",
+      "postalCode": "97134",
+      "municipality": "Mérida",
+      "specialty": "Hospital",
+      "phone": "9999434373",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.013085,
+        "lng": -89.572176
+      },
+      "originalCoordinates": {
+        "lat": 21.013085,
+        "lng": -89.572176
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "07:00-14:00",
+        "07:00-14:00",
+        "07:00-14:00",
+        "07:00-14:00",
+        "07:00-14:00",
+        null,
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05643023",
+      "category": "hospital",
+      "name": "Star Médica Mérida",
+      "neighborhood": "Altabrisa",
+      "address": "C. 26 No. 199",
+      "postalCode": "97130",
+      "municipality": "Mérida",
+      "specialty": "Hospital",
+      "phone": "9999302880",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": null,
+      "originalCoordinates": {
+        "lat": 19.68285,
+        "lng": -101.191527
+      },
+      "coordinateIssue": "Las coordenadas del archivo están fuera de la zona de Mérida.",
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05710804",
+      "category": "hospital",
+      "name": "Bital Unidad de Hemodiálisis",
+      "neighborhood": "Francisco de Montejo",
+      "address": "C. 51 No. 275",
+      "postalCode": "97203",
+      "municipality": "Mérida",
+      "specialty": "Hospital",
+      "phone": "9994062104",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0311848,
+        "lng": -89.6444887
+      },
+      "originalCoordinates": {
+        "lat": 21.0311848,
+        "lng": -89.6444887
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "07:30-15:00 Y 15:30-19:30",
+        "07:30-15:00 Y 15:30-19:30",
+        "07:30-15:00 Y 15:30-19:30",
+        "07:30-15:00 Y 15:30-19:30",
+        "07:30-15:00 Y 15:30-19:30",
+        "07:30-11:00 Y 11:30-15:00",
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05690145",
+      "category": "hospital",
+      "name": "Centro Médico de Las Américas",
+      "neighborhood": "Mérida Centro",
+      "address": "C. 54 No. 365",
+      "postalCode": "97000",
+      "municipality": "Mérida",
+      "specialty": "Hospital",
+      "phone": "9999262111",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9841512,
+        "lng": -89.6186464
+      },
+      "originalCoordinates": {
+        "lat": 20.9841512,
+        "lng": -89.6186464
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05707714",
+      "category": "hospital",
+      "name": "Clinica Alivia Suc. Mérida",
+      "neighborhood": "Altabrisa",
+      "address": "C. 20 No. 235 Int. Loc. 305",
+      "postalCode": "97133",
+      "municipality": "Mérida",
+      "specialty": "Hospital",
+      "phone": "9994008230",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0214345,
+        "lng": -89.5822104
+      },
+      "originalCoordinates": {
+        "lat": 21.0214345,
+        "lng": -89.5822104
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "09:00-18:00",
+        "09:00-18:00",
+        "09:00-18:00",
+        "09:00-18:00",
+        "09:00-18:00",
+        "09:00-13:00",
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "00044644",
+      "category": "hospital",
+      "name": "Clínica de Mérida",
+      "neighborhood": "García Ginerés",
+      "address": "C. 32 No. 242",
+      "postalCode": "97070",
+      "municipality": "Mérida",
+      "specialty": "Hospital",
+      "phone": "9999421800",
+      "secondaryPhone": "9999258972",
+      "price": null,
+      "coordinates": {
+        "lat": 20.986371,
+        "lng": -89.638896
+      },
+      "originalCoordinates": {
+        "lat": 20.986371,
+        "lng": -89.638896
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05683920",
+      "category": "hospital",
+      "name": "Medimac Mérida",
+      "neighborhood": "Jardines de Vista Alegre",
+      "address": "C. 17 No. 104-A",
+      "postalCode": "97138",
+      "municipality": "Mérida",
+      "specialty": "Hospital",
+      "phone": "9994787101",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0118917,
+        "lng": -89.5829787
+      },
+      "originalCoordinates": {
+        "lat": 21.0118917,
+        "lng": -89.5829787
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05687640",
+      "category": "hospital",
+      "name": "Christus Muguerza Faro del Mayab",
+      "neighborhood": "Santa Gertrudis Copó",
+      "address": "C. 24 No. S/N",
+      "postalCode": "97305",
+      "municipality": "Mérida",
+      "specialty": "Hospital",
+      "phone": "9996894500",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0437908,
+        "lng": -89.6039611
+      },
+      "originalCoordinates": {
+        "lat": 21.0437908,
+        "lng": -89.6039611
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05719968",
+      "category": "laboratorio",
+      "name": "Suc. Laboratorio Chontalpa Kukulcán",
+      "neighborhood": "Morelos",
+      "address": "Cto. Colonias No. 1203",
+      "postalCode": "97190",
+      "municipality": "Mérida",
+      "specialty": "Laboratorio",
+      "phone": "9992274392",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.940082,
+        "lng": -89.597393
+      },
+      "originalCoordinates": {
+        "lat": 20.940082,
+        "lng": -89.597393
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05719941",
+      "category": "laboratorio",
+      "name": "Suc. Laboratorio Chontalpa Caucel 2",
+      "neighborhood": "Balcones II",
+      "address": "C. 51 No. 825 Int. Loc. 1",
+      "postalCode": "97314",
+      "municipality": "Mérida",
+      "specialty": "Laboratorio",
+      "phone": "9992274392",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.002481,
+        "lng": -89.716636
+      },
+      "originalCoordinates": {
+        "lat": 21.002481,
+        "lng": -89.716636
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05719976",
+      "category": "laboratorio",
+      "name": "Suc. Laboratorio Chontalpa Altabrisa",
+      "neighborhood": "Altabrisa",
+      "address": "Calle 26 No. 212 Int. Loc. 4",
+      "postalCode": "97130",
+      "municipality": "Mérida",
+      "specialty": "Laboratorio",
+      "phone": "9999316161",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.015517,
+        "lng": -89.584865
+      },
+      "originalCoordinates": {
+        "lat": 21.015517,
+        "lng": -89.584865
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "06:30-19:00",
+        "06:30-19:00",
+        "06:30-19:00",
+        "06:30-19:00",
+        "06:30-19:00",
+        "06:30-19:00",
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "01516086",
+      "category": "laboratorio",
+      "name": "Laboratorio de Patología del Sureste",
+      "neighborhood": "García Ginerés",
+      "address": "C. 19 No. 195 Int. 1",
+      "postalCode": "97070",
+      "municipality": "Mérida",
+      "specialty": "Laboratorio",
+      "phone": "9999231599",
+      "secondaryPhone": "9999285922",
+      "price": null,
+      "coordinates": {
+        "lat": 20.988505,
+        "lng": -89.630415
+      },
+      "originalCoordinates": {
+        "lat": 20.988505,
+        "lng": -89.630415
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "09:00-13:00 Y 16:00-20:00",
+        "09:00-13:00 Y 16:00-20:00",
+        "09:00-13:00 Y 16:00-20:00",
+        "09:00-13:00 Y 16:00-20:00",
+        "09:00-13:00 Y 16:00-20:00",
+        "09:00-13:00",
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05719984",
+      "category": "laboratorio",
+      "name": "Suc. Laboratorio Chontalpa Fco. de Montejo",
+      "neighborhood": "Francisco de Montejo",
+      "address": "C. 51 No. 236",
+      "postalCode": "97203",
+      "municipality": "Mérida",
+      "specialty": "Laboratorio",
+      "phone": "9994062167",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.030448,
+        "lng": -89.643078
+      },
+      "originalCoordinates": {
+        "lat": 21.030448,
+        "lng": -89.643078
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "06:00-14:00",
+        "06:00-14:00",
+        "06:00-14:00",
+        "06:00-14:00",
+        "06:00-14:00",
+        "06:00-14:00",
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05719917",
+      "category": "laboratorio",
+      "name": "Suc. Laboratorio Chontalpa Ejercito Mexicano",
+      "neighborhood": "Jardines del Sur",
+      "address": "C. 131 No. 300",
+      "postalCode": "97285",
+      "municipality": "Mérida",
+      "specialty": "Laboratorio",
+      "phone": "9992274392",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.927868,
+        "lng": -89.612662
+      },
+      "originalCoordinates": {
+        "lat": 20.927868,
+        "lng": -89.612662
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05262682",
+      "category": "laboratorio",
+      "name": "Medicina Nuclear Peninsular",
+      "neighborhood": "México",
+      "address": "Av. 16 No. 122",
+      "postalCode": "97125",
+      "municipality": "Mérida",
+      "specialty": "Laboratorio",
+      "phone": "9999381634",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.986388,
+        "lng": -89.638932
+      },
+      "originalCoordinates": {
+        "lat": 20.986388,
+        "lng": -89.638932
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "07:00-20:00",
+        "07:00-20:00",
+        "07:00-20:00",
+        "07:00-20:00",
+        "07:00-20:00",
+        "07:00-17:00",
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05719909",
+      "category": "laboratorio",
+      "name": "Suc. Laboratorio Chontalpa Av. Mérida 2000",
+      "neighborhood": "Jardines de Lindavi",
+      "address": "Av. Mérida 2000 No. 392 Int. Loc. 1",
+      "postalCode": "97219",
+      "municipality": "Mérida",
+      "specialty": "Laboratorio",
+      "phone": "9999878556",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.01054,
+        "lng": -89.654098
+      },
+      "originalCoordinates": {
+        "lat": 21.01054,
+        "lng": -89.654098
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05719895",
+      "category": "laboratorio",
+      "name": "Suc. Laboratorio Chontalpa Itzáes",
+      "neighborhood": "Mérida Centro",
+      "address": "Av. Itzaes No. 499 Int. G",
+      "postalCode": "97000",
+      "municipality": "Mérida",
+      "specialty": "Laboratorio",
+      "phone": "9994068269",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.977128,
+        "lng": -89.640332
+      },
+      "originalCoordinates": {
+        "lat": 20.977128,
+        "lng": -89.640332
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "06:00-14:00",
+        "06:00-14:00",
+        "06:00-14:00",
+        "06:00-14:00",
+        "06:00-14:00",
+        "06:00-14:00",
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05719933",
+      "category": "laboratorio",
+      "name": "Suc. Laboratorio Chontalpa Caucel",
+      "neighborhood": "Ciudad Caucel",
+      "address": "C. 23 No. 612 Int. A",
+      "postalCode": "97314",
+      "municipality": "Mérida",
+      "specialty": "Laboratorio",
+      "phone": "9995184265",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.004653,
+        "lng": -89.687618
+      },
+      "originalCoordinates": {
+        "lat": 21.004653,
+        "lng": -89.687618
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "06:00-14:00",
+        "06:00-14:00",
+        "06:00-14:00",
+        "06:00-14:00",
+        "06:00-14:00",
+        "06:00-14:00",
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "05719887",
+      "category": "laboratorio",
+      "name": "Suc. Laboratorio Chontalpa Juan Pablo II",
+      "neighborhood": "Juan Pablo II",
+      "address": "C. 31 No. 427B",
+      "postalCode": "97246",
+      "municipality": "Mérida",
+      "specialty": "Laboratorio",
+      "phone": "9991820210",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.969048,
+        "lng": -89.68448
+      },
+      "originalCoordinates": {
+        "lat": 20.969048,
+        "lng": -89.68448
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        "06:30-12:00",
+        null
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA La Castellana",
+      "neighborhood": "La Castellana",
+      "address": "C. 41 X 41 No. 249",
+      "postalCode": "97203",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.039689,
+        "lng": -89.637108
+      },
+      "originalCoordinates": {
+        "lat": 21.039689,
+        "lng": -89.637108
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-2",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Centro Mérida",
+      "neighborhood": "Mérida Centro",
+      "address": "C. 63 X 60 y 62 No. 502-A",
+      "postalCode": "97000",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.966428,
+        "lng": -89.62345
+      },
+      "originalCoordinates": {
+        "lat": 20.966428,
+        "lng": -89.62345
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Jardines",
+      "neighborhood": "Jardines De Mérida",
+      "address": "C. 17 No. 858",
+      "postalCode": "97135",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0207764,
+        "lng": -89.6545233
+      },
+      "originalCoordinates": {
+        "lat": 21.0207764,
+        "lng": -89.6545233
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-3",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Fco. Montejo 2",
+      "neighborhood": "San Francisco I",
+      "address": "C. 51 X 46 Y 48 No. 265",
+      "postalCode": "97206",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.96153641,
+        "lng": -89.66376417
+      },
+      "originalCoordinates": {
+        "lat": 20.96153641,
+        "lng": -89.66376417
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-2",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Emiliano Zapata",
+      "neighborhood": "Nueva Pacabtun",
+      "address": "C. 7 No. 594",
+      "postalCode": "97159",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "3336693333",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.981077,
+        "lng": -89.57807
+      },
+      "originalCoordinates": {
+        "lat": 20.981077,
+        "lng": -89.57807
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-4",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Canek",
+      "neighborhood": "El Porvenir",
+      "address": "C. 59-A X 128 No. 286",
+      "postalCode": "97226",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.990132,
+        "lng": -89.664308
+      },
+      "originalCoordinates": {
+        "lat": 20.990132,
+        "lng": -89.664308
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-3",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Base Área",
+      "neighborhood": "Castilla Camara",
+      "address": "C. 111 Circuito Colonias No. 782",
+      "postalCode": "97278",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "3336693333",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9378,
+        "lng": -89.644402
+      },
+      "originalCoordinates": {
+        "lat": 20.9378,
+        "lng": -89.644402
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-5",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. Yza Caucel IMSS",
+      "neighborhood": "Ciudad Caucel",
+      "address": "C. 43 No. 686",
+      "postalCode": "97314",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9998120180",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.000791,
+        "lng": -89.698532
+      },
+      "originalCoordinates": {
+        "lat": 21.000791,
+        "lng": -89.698532
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-4",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Altabrisa",
+      "neighborhood": "Altabrisa",
+      "address": "C. 20 No. 253",
+      "postalCode": "97130",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0246653,
+        "lng": -89.585717
+      },
+      "originalCoordinates": {
+        "lat": 21.0246653,
+        "lng": -89.585717
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1010904",
+      "category": "farmacia",
+      "name": "Farmacias Benavides. S.A.B. de C.V. - Suc. Luxus",
+      "neighborhood": "Altabrisa",
+      "address": "C. 20 No. 235 Int. 101",
+      "postalCode": "97130",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8181507700",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.021599,
+        "lng": -89.582187
+      },
+      "originalCoordinates": {
+        "lat": 21.021599,
+        "lng": -89.582187
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "07:00-23:00",
+        "07:00-23:00",
+        "07:00-23:00",
+        "07:00-23:00",
+        "07:00-23:00",
+        "07:00-23:00",
+        "07:00-23:00"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-6",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Fracc. Américas 2",
+      "neighborhood": "Las Américas II",
+      "address": "C. 102 X 595 No. 263",
+      "postalCode": "97302",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.077751,
+        "lng": -89.656064
+      },
+      "originalCoordinates": {
+        "lat": 21.077751,
+        "lng": -89.656064
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-5",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. 31 Rinconada De Caucel",
+      "neighborhood": "Ciudad Caucel",
+      "address": "C. 31 No. 695A",
+      "postalCode": "97314",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "7775021517",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0280462,
+        "lng": -89.6046409
+      },
+      "originalCoordinates": {
+        "lat": 21.0280462,
+        "lng": -89.6046409
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-7",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Mulsay",
+      "neighborhood": "Nueva Mulsay I",
+      "address": "C. 65 A X 102 No. 786 Mza. 25",
+      "postalCode": "97249",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.96350714,
+        "lng": -89.65053406
+      },
+      "originalCoordinates": {
+        "lat": 20.96350714,
+        "lng": -89.65053406
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-8",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Mérida Reforma",
+      "neighborhood": "Mérida Centro",
+      "address": "C. 35 X Avenida Reforma y 72 A No. 526-D Mza. 208",
+      "postalCode": "97000",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.983758,
+        "lng": -89.625658
+      },
+      "originalCoordinates": {
+        "lat": 20.983758,
+        "lng": -89.625658
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-9",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Dorada",
+      "neighborhood": "Zona Dorada II",
+      "address": "C. 50 No. 143",
+      "postalCode": "97217",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.993334,
+        "lng": -89.650981
+      },
+      "originalCoordinates": {
+        "lat": 20.993334,
+        "lng": -89.650981
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-10",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Juan Pablo 2",
+      "neighborhood": "Xoclán",
+      "address": "C. 65-A X 120 No. 999",
+      "postalCode": "97246",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.961547,
+        "lng": -89.663639
+      },
+      "originalCoordinates": {
+        "lat": 20.961547,
+        "lng": -89.663639
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-6",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Av.42 Montejo",
+      "neighborhood": "Francisco Montejo",
+      "address": "C. 42 No. 321",
+      "postalCode": "97203",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9995182146",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0270471,
+        "lng": -89.6425148
+      },
+      "originalCoordinates": {
+        "lat": 21.0270471,
+        "lng": -89.6425148
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-7",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Quetzalcoatl",
+      "neighborhood": "Emilio Portes Gil",
+      "address": "C. 65 Av. Quetzalcoatl",
+      "postalCode": "97167",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9593957,
+        "lng": -89.5917183
+      },
+      "originalCoordinates": {
+        "lat": 20.9593957,
+        "lng": -89.5917183
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-11",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA 50 Sur",
+      "neighborhood": "Dolores Otero",
+      "address": "C. 111 X 50 No. 673-H",
+      "postalCode": "97270",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.938242,
+        "lng": -89.619712
+      },
+      "originalCoordinates": {
+        "lat": 20.938242,
+        "lng": -89.619712
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-8",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Merida 2000",
+      "neighborhood": "San Pablo Uxmal",
+      "address": "C. 48A No. 328",
+      "postalCode": "97203",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9997502607",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0181109,
+        "lng": -89.649286
+      },
+      "originalCoordinates": {
+        "lat": 21.0181109,
+        "lng": -89.649286
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-12",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. Yza Mérida Caucel Crucero",
+      "neighborhood": "Ciudad Caucel",
+      "address": "C. 59 No. 697 Int. A",
+      "postalCode": "97314",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9999122331",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.997247,
+        "lng": -89.704067
+      },
+      "originalCoordinates": {
+        "lat": 20.997247,
+        "lng": -89.704067
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-9",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Alfredo Barrera",
+      "neighborhood": "García Ginerés",
+      "address": "C. 7 (Alfredo Barrera Vazquez) No. 229",
+      "postalCode": "97070",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "423257942",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9948803,
+        "lng": -89.6388712
+      },
+      "originalCoordinates": {
+        "lat": 20.9948803,
+        "lng": -89.6388712
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-10",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Jose Diaz Bolio",
+      "neighborhood": "México Oriente",
+      "address": "C. 21 No. 184",
+      "postalCode": "97137",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0006958,
+        "lng": -89.6028389
+      },
+      "originalCoordinates": {
+        "lat": 21.0006958,
+        "lng": -89.6028389
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-13",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Kukulkán",
+      "neighborhood": "Morelos",
+      "address": "C. 18 Poniente x Circuito Colonias No. 108 Mza. 87",
+      "postalCode": "97190",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9991310709",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.940033,
+        "lng": -89.598378
+      },
+      "originalCoordinates": {
+        "lat": 20.940033,
+        "lng": -89.598378
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-11",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Montecristo.",
+      "neighborhood": "Montecristo",
+      "address": "C. 4 No. 137",
+      "postalCode": "97133",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "3336693333",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.012401,
+        "lng": -89.596183
+      },
+      "originalCoordinates": {
+        "lat": 21.012401,
+        "lng": -89.596183
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-14",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA María Luisa II",
+      "neighborhood": "María Luisa",
+      "address": "C. 42 X 103 No. 636",
+      "postalCode": "97199",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.00275116,
+        "lng": -89.6021658
+      },
+      "originalCoordinates": {
+        "lat": 21.00275116,
+        "lng": -89.6021658
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-15",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA México",
+      "neighborhood": "Itzimna",
+      "address": "C. 18 X 21 No. 100-A Mza. 289",
+      "postalCode": "97100",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.991183,
+        "lng": -89.610377
+      },
+      "originalCoordinates": {
+        "lat": 20.991183,
+        "lng": -89.610377
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-12",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Xoclan.",
+      "neighborhood": "Xoclán",
+      "address": "C. 65-A No. 1053",
+      "postalCode": "97246",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "3336693333",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.960815,
+        "lng": -89.66789
+      },
+      "originalCoordinates": {
+        "lat": 20.960815,
+        "lng": -89.66789
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-16",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Juan Pablo III",
+      "neighborhood": "Juan Pablo II",
+      "address": "C. 32 X 41 No. 426-B",
+      "postalCode": "97246",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9688662,
+        "lng": -89.6841999
+      },
+      "originalCoordinates": {
+        "lat": 20.9688662,
+        "lng": -89.6841999
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-17",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Brisas",
+      "neighborhood": "Las Brisas",
+      "address": "C. 26 Diagonal No. 620",
+      "postalCode": "97144",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.98346,
+        "lng": -89.584727
+      },
+      "originalCoordinates": {
+        "lat": 20.98346,
+        "lng": -89.584727
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-13",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Maria Luisa",
+      "neighborhood": "María Luisa",
+      "address": "C. 21 Circuito Colonias No. 148",
+      "postalCode": "97199",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9367948,
+        "lng": -89.6044028
+      },
+      "originalCoordinates": {
+        "lat": 20.9367948,
+        "lng": -89.6044028
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-14",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Tablaje",
+      "neighborhood": "Ciudad Caucel",
+      "address": "Av. Pedro Mendez Magaña",
+      "postalCode": "97314",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9999533123",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9968298,
+        "lng": -89.6822686
+      },
+      "originalCoordinates": {
+        "lat": 20.9968298,
+        "lng": -89.6822686
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-15",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Camara De Comercio",
+      "neighborhood": "San Antonio Cucul",
+      "address": "C. 49 Camara de Comercio No. 205",
+      "postalCode": "97116",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0208012,
+        "lng": -89.6118434
+      },
+      "originalCoordinates": {
+        "lat": 21.0208012,
+        "lng": -89.6118434
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-18",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. Yza Mérida Bojórquez",
+      "neighborhood": "Bojórquez",
+      "address": "C. 59 H. Esquina 104 No. 540",
+      "postalCode": "97230",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9998280186",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9773408,
+        "lng": -89.6498068
+      },
+      "originalCoordinates": {
+        "lat": 20.9773408,
+        "lng": -89.6498068
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-16",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Av. Tecnologico",
+      "neighborhood": "Del Norte",
+      "address": "C. 60 No. 228",
+      "postalCode": "97120",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0144487,
+        "lng": -89.6244303
+      },
+      "originalCoordinates": {
+        "lat": 21.0144487,
+        "lng": -89.6244303
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-19",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Montecristo II",
+      "neighborhood": "San Antonio Cinta",
+      "address": "C. 5 X 22 No. 117",
+      "postalCode": "97139",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9350575,
+        "lng": -89.55655511
+      },
+      "originalCoordinates": {
+        "lat": 20.9350575,
+        "lng": -89.55655511
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-20",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Internacional",
+      "neighborhood": "Mérida Centro",
+      "address": "C. 86 X 59A No. 484-I Int. Depto. 2 Y 3",
+      "postalCode": "97230",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9751802,
+        "lng": -89.6401384
+      },
+      "originalCoordinates": {
+        "lat": 20.9751802,
+        "lng": -89.6401384
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-21",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Leandro Valle",
+      "neighborhood": "Azcorra",
+      "address": "C. 69 X 28 Diagonal No. 282-F",
+      "postalCode": "97177",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.955117,
+        "lng": -89.6012605
+      },
+      "originalCoordinates": {
+        "lat": 20.955117,
+        "lng": -89.6012605
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-17",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Petkanche",
+      "neighborhood": "Petkanche",
+      "address": "C. 35 No. 234",
+      "postalCode": "97145",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9874315,
+        "lng": -89.5910162
+      },
+      "originalCoordinates": {
+        "lat": 20.9874315,
+        "lng": -89.5910162
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-22",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Polígono 2",
+      "neighborhood": "Bulevares de Oriente",
+      "address": "C. 20 X 31A No. 294",
+      "postalCode": "97143",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.06917211,
+        "lng": -89.65729033
+      },
+      "originalCoordinates": {
+        "lat": 21.06917211,
+        "lng": -89.65729033
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1010904-2",
+      "category": "farmacia",
+      "name": "Farmacias Benavides. S.A.B. de C.V. - Suc. Skywork",
+      "neighborhood": "Jalapa",
+      "address": "Av. Gracia Lavín No. Nivel 1 Int. Loc. 10",
+      "postalCode": "97305",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8181507700",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.057524,
+        "lng": -89.59799
+      },
+      "originalCoordinates": {
+        "lat": 21.057524,
+        "lng": -89.59799
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "07:00-23:00",
+        "07:00-23:00",
+        "07:00-23:00",
+        "07:00-23:00",
+        "07:00-23:00",
+        "07:00-23:00",
+        "07:00-23:00"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-18",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Canek",
+      "neighborhood": "Paseo de Las Fuentes",
+      "address": "C. 59A No. 529A",
+      "postalCode": "97225",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9799087,
+        "lng": -89.6475316
+      },
+      "originalCoordinates": {
+        "lat": 20.9799087,
+        "lng": -89.6475316
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-19",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Caucel Glorieta",
+      "neighborhood": "Ciudad Caucel",
+      "address": "Av. 43 Poniente No. 707",
+      "postalCode": "97314",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9999282580",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0150679,
+        "lng": -89.7045111
+      },
+      "originalCoordinates": {
+        "lat": 21.0150679,
+        "lng": -89.7045111
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-20",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Estadio.",
+      "neighborhood": "Salvador Alvarado Sur",
+      "address": "C. 16 No. 304",
+      "postalCode": "97196",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "3336693333",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.946272,
+        "lng": -89.59248
+      },
+      "originalCoordinates": {
+        "lat": 20.946272,
+        "lng": -89.59248
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-21",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Av. 41 Galerias",
+      "neighborhood": "Xcumpich",
+      "address": "C. 3 (Ahora 41) No. 241",
+      "postalCode": "97204",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0352207,
+        "lng": -89.6357563
+      },
+      "originalCoordinates": {
+        "lat": 21.0352207,
+        "lng": -89.6357563
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-23",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA María Luisa",
+      "neighborhood": "María Luisa",
+      "address": "C. 21 X 18 No. 240",
+      "postalCode": "97199",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.935396,
+        "lng": -89.605794
+      },
+      "originalCoordinates": {
+        "lat": 20.935396,
+        "lng": -89.605794
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-22",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. 65 Centro",
+      "neighborhood": "Mérida Centro",
+      "address": "C. 65 No. 463",
+      "postalCode": "97000",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9994294615",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9642707,
+        "lng": -89.6187131
+      },
+      "originalCoordinates": {
+        "lat": 20.9642707,
+        "lng": -89.6187131
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-24",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. Yza Sambulá",
+      "neighborhood": "Sambula",
+      "address": "C. 79D x 79 I No. 702-B",
+      "postalCode": "97259",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9997581212",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.951984,
+        "lng": -89.649832
+      },
+      "originalCoordinates": {
+        "lat": 20.951984,
+        "lng": -89.649832
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-23",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Xcumpich",
+      "neighborhood": "Loma Bonita",
+      "address": "C. 7 No. 321",
+      "postalCode": "97205",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0255175,
+        "lng": -89.628107
+      },
+      "originalCoordinates": {
+        "lat": 21.0255175,
+        "lng": -89.628107
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-25",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. Yza Fidel Velázquez Mérida",
+      "neighborhood": "Fidel Velázquez",
+      "address": "C. 38 No. 1912 Int. Loc. 69",
+      "postalCode": "97166",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9997581212",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.967341,
+        "lng": -89.572463
+      },
+      "originalCoordinates": {
+        "lat": 20.967341,
+        "lng": -89.572463
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-26",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Yucalpetén",
+      "neighborhood": "Jardines de Yucalpeten",
+      "address": "C. 122 x 65 y 67 No. 133",
+      "postalCode": "97248",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9799905,
+        "lng": -89.6617228
+      },
+      "originalCoordinates": {
+        "lat": 20.9799905,
+        "lng": -89.6617228
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-27",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Fco. Montejo 1",
+      "neighborhood": "Francisco de Montejo",
+      "address": "C. 42 X 61 No. 450",
+      "postalCode": "97203",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.021737,
+        "lng": -89.642944
+      },
+      "originalCoordinates": {
+        "lat": 21.021737,
+        "lng": -89.642944
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-28",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Fracc. Américas",
+      "neighborhood": "Las Américas II",
+      "address": "C. 74 X 59 No. 335",
+      "postalCode": "97302",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.067805,
+        "lng": -89.644593
+      },
+      "originalCoordinates": {
+        "lat": 21.067805,
+        "lng": -89.644593
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1010904-3",
+      "category": "farmacia",
+      "name": "Farmacias Benavides. S.A.B. de C.V. - Suc. Camara de comercio",
+      "neighborhood": "Benito Juárez Nte.",
+      "address": "C. 52 No. 371 Int. Loc. 1 y 2",
+      "postalCode": "97119",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8181507700",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.019807,
+        "lng": -89.617898
+      },
+      "originalCoordinates": {
+        "lat": 21.019807,
+        "lng": -89.617898
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "07:00-23:00",
+        "07:00-23:00",
+        "07:00-23:00",
+        "07:00-23:00",
+        "07:00-23:00",
+        "07:00-23:00",
+        "07:00-23:00"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-29",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Glorieta II",
+      "neighborhood": "García Ginerés",
+      "address": "C. 32 X Avenida Colón No. 200-A Int. Depto. 5",
+      "postalCode": "97070",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.988985,
+        "lng": -89.638537
+      },
+      "originalCoordinates": {
+        "lat": 20.988985,
+        "lng": -89.638537
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-30",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. San Remo",
+      "neighborhood": "Altabrisa",
+      "address": "C. 20 entre 15 y 19 No. 251",
+      "postalCode": "97130",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9997581212",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.022617,
+        "lng": -89.583598
+      },
+      "originalCoordinates": {
+        "lat": 21.022617,
+        "lng": -89.583598
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-24",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Los Pinos",
+      "neighborhood": "Los Pinos",
+      "address": "C. 40 No. 446",
+      "postalCode": "97138",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0023054,
+        "lng": -89.579234
+      },
+      "originalCoordinates": {
+        "lat": 21.0023054,
+        "lng": -89.579234
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-25",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Campestre",
+      "neighborhood": "Campestre",
+      "address": "C. 38 Av Cmapestre No. 269",
+      "postalCode": "97120",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0099235,
+        "lng": -89.6181646
+      },
+      "originalCoordinates": {
+        "lat": 21.0099235,
+        "lng": -89.6181646
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-31",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. Yza Caucel Glorieta",
+      "neighborhood": "Ciudad Caucel",
+      "address": "C. 57 No. 596",
+      "postalCode": "97314",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9991656195",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.994845,
+        "lng": -89.689666
+      },
+      "originalCoordinates": {
+        "lat": 20.994845,
+        "lng": -89.689666
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-32",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Cruz Roja",
+      "neighborhood": "Chichen-itza",
+      "address": "C. 27 X 24 No. 127-A",
+      "postalCode": "97170",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.960105,
+        "lng": -89.580231
+      },
+      "originalCoordinates": {
+        "lat": 20.960105,
+        "lng": -89.580231
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-26",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Chuburná",
+      "neighborhood": "Chuburná de Hidalgo",
+      "address": "C. 20 No. 91 Int. A",
+      "postalCode": "97205",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "3336693333",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.017288,
+        "lng": -89.631886
+      },
+      "originalCoordinates": {
+        "lat": 21.017288,
+        "lng": -89.631886
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-33",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA El Porvenir",
+      "neighborhood": "El Porvenir",
+      "address": "C. 128 x 55 Local-1 No. 318",
+      "postalCode": "97226",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.993426,
+        "lng": -89.6635941
+      },
+      "originalCoordinates": {
+        "lat": 20.993426,
+        "lng": -89.6635941
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-34",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Macroplaza",
+      "neighborhood": "Itzimná 108",
+      "address": "C. 36 x 25 Diagonal No. 457",
+      "postalCode": "97143",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.997101,
+        "lng": -89.574846
+      },
+      "originalCoordinates": {
+        "lat": 20.997101,
+        "lng": -89.574846
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-27",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc.Opichen.",
+      "neighborhood": "Paseos De Opichen",
+      "address": "C. 81 No. 452",
+      "postalCode": "97246",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "3336693333",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.947487,
+        "lng": -89.687553
+      },
+      "originalCoordinates": {
+        "lat": 20.947487,
+        "lng": -89.687553
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-35",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Pinos I",
+      "neighborhood": "Los Pinos",
+      "address": "C. 17 X 34 No. 398 Int. Depto. 1",
+      "postalCode": "97138",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.004337,
+        "lng": -89.585258
+      },
+      "originalCoordinates": {
+        "lat": 21.004337,
+        "lng": -89.585258
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-36",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Cumbres",
+      "neighborhood": "Cámara de Comercio Norte",
+      "address": "C. 18 X 11 y 13 No. 299 Int. 5",
+      "postalCode": "97133",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.015306,
+        "lng": -89.587541
+      },
+      "originalCoordinates": {
+        "lat": 21.015306,
+        "lng": -89.587541
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "00049786",
+      "category": "farmacia",
+      "name": "Farmacos Especializados. S.A. de C.V. - Suc. Mérida",
+      "neighborhood": "Mérida Centro",
+      "address": "C. 60 No. 325 Int. A",
+      "postalCode": "97000",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9999256053",
+      "secondaryPhone": "9999204942",
+      "price": null,
+      "coordinates": {
+        "lat": 20.986421,
+        "lng": -89.619756
+      },
+      "originalCoordinates": {
+        "lat": 20.986421,
+        "lng": -89.619756
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "00:00-00:00"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-37",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Aviación I",
+      "neighborhood": "Nueva Sambulá",
+      "address": "C. 71 X 86-B No. 626",
+      "postalCode": "97250",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.96212,
+        "lng": -89.641833
+      },
+      "originalCoordinates": {
+        "lat": 20.96212,
+        "lng": -89.641833
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-38",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Caucel Zoológico",
+      "neighborhood": "Ciudad Caucel",
+      "address": "C. 60 X 85 No. 849-D",
+      "postalCode": "97314",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9880229,
+        "lng": -89.6912492
+      },
+      "originalCoordinates": {
+        "lat": 20.9880229,
+        "lng": -89.6912492
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-28",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Zona Dorada",
+      "neighborhood": "Miguel Hidalgo",
+      "address": "C. 21 No. 224",
+      "postalCode": "97220",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.988313,
+        "lng": -89.6528148
+      },
+      "originalCoordinates": {
+        "lat": 20.988313,
+        "lng": -89.6528148
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-39",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Vergel",
+      "neighborhood": "Vergel II",
+      "address": "C. 8B x 17 No. 289",
+      "postalCode": "97173",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.93362283,
+        "lng": -89.5739587933615
+      },
+      "originalCoordinates": {
+        "lat": 20.93362283,
+        "lng": -89.5739587933615
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-29",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Juan Pablo Ii",
+      "neighborhood": "Juan Pablo Ii",
+      "address": "C. 3 G No. 331",
+      "postalCode": "97246",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9842915,
+        "lng": -89.6740631
+      },
+      "originalCoordinates": {
+        "lat": 20.9842915,
+        "lng": -89.6740631
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-40",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Limones",
+      "neighborhood": "Limones",
+      "address": "C. 37 X 26 No. 208 Int. Loc. 2,3 Y 4",
+      "postalCode": "97219",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.002585,
+        "lng": -89.64832
+      },
+      "originalCoordinates": {
+        "lat": 21.002585,
+        "lng": -89.64832
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-41",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA T-1",
+      "neighborhood": "Industrial",
+      "address": "C. 41 X 32 No. 438",
+      "postalCode": "97150",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.97778,
+        "lng": -89.60338
+      },
+      "originalCoordinates": {
+        "lat": 20.97778,
+        "lng": -89.60338
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "00049786-2",
+      "category": "farmacia",
+      "name": "Farmacos Especializados. S.A. de C.V. - Suc. Mérida 2",
+      "neighborhood": "Los Palmares de Altabrisa",
+      "address": "C. 26 entre Av. 7 y 15 No. 199",
+      "postalCode": "97133",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9991961150",
+      "secondaryPhone": "9991961151",
+      "price": null,
+      "coordinates": {
+        "lat": 21.015884,
+        "lng": -89.585265
+      },
+      "originalCoordinates": {
+        "lat": 21.015884,
+        "lng": -89.585265
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "00:00-00:00"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-42",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Cordemex",
+      "neighborhood": "Cordemex",
+      "address": "C. CALLE 61S/C Y AVENIDA No. 300 Int. Loc. 3",
+      "postalCode": "97115",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": null,
+      "originalCoordinates": {
+        "lat": 23.5540767,
+        "lng": -102.6205
+      },
+      "coordinateIssue": "Las coordenadas del archivo están fuera de la zona de Mérida.",
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-30",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Av. 33 Macroplaza",
+      "neighborhood": "Polígono",
+      "address": "C. 33 No. 226",
+      "postalCode": "97143",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9997091638",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0018841,
+        "lng": -89.6881694
+      },
+      "originalCoordinates": {
+        "lat": 21.0018841,
+        "lng": -89.6881694
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-31",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Merida Yucatan Av. 62 Pedregales",
+      "neighborhood": "Ciudad Caucel",
+      "address": "Blvd. Nuestra Señora de las Mercedes",
+      "postalCode": "97314",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9999246755",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9982261,
+        "lng": -89.633088
+      },
+      "originalCoordinates": {
+        "lat": 20.9982261,
+        "lng": -89.633088
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-43",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Altabrisa",
+      "neighborhood": "Los Palmares de Altabrisa",
+      "address": "C. 7 X 22 Y 24 No. 451 Int. Loc. 3",
+      "postalCode": "97133",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0160457,
+        "lng": -89.5835638
+      },
+      "originalCoordinates": {
+        "lat": 21.0160457,
+        "lng": -89.5835638
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-44",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. Yza Cholul Plaza",
+      "neighborhood": "Cholul",
+      "address": "C. 22 No. 101",
+      "postalCode": "97305",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9991675096",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.042458,
+        "lng": -89.558059
+      },
+      "originalCoordinates": {
+        "lat": 21.042458,
+        "lng": -89.558059
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-45",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Fco. Montejo 3",
+      "neighborhood": "Francisco de Montejo",
+      "address": "C. 50 X 47-A No. 222",
+      "postalCode": "97203",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.034999,
+        "lng": -89.644779
+      },
+      "originalCoordinates": {
+        "lat": 21.034999,
+        "lng": -89.644779
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-32",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Las Torres II.",
+      "neighborhood": "Ciudad Caucel",
+      "address": "C. 31 No. 784",
+      "postalCode": "97314",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "3336693333",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.006652,
+        "lng": -89.710601
+      },
+      "originalCoordinates": {
+        "lat": 21.006652,
+        "lng": -89.710601
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-33",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Fidel Velazquez",
+      "neighborhood": "Pacabtún",
+      "address": "Cjon. Calle 77 No. 500",
+      "postalCode": "97160",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9997500072",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9645934,
+        "lng": -89.5802577
+      },
+      "originalCoordinates": {
+        "lat": 20.9645934,
+        "lng": -89.5802577
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-46",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Pacabtún",
+      "neighborhood": "Pacabtún",
+      "address": "C. 29 A X 50 No. 343",
+      "postalCode": "97160",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.975268,
+        "lng": -89.580659
+      },
+      "originalCoordinates": {
+        "lat": 20.975268,
+        "lng": -89.580659
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-34",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Av 35 San Juan Grande",
+      "neighborhood": "San Juan Grande",
+      "address": "Av. 35 No. 214",
+      "postalCode": "97145",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.989657,
+        "lng": -89.5868928
+      },
+      "originalCoordinates": {
+        "lat": 20.989657,
+        "lng": -89.5868928
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-35",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Salvador Alvarado",
+      "neighborhood": "Salvador Alvarado Oriente",
+      "address": "C. 21 No. 450",
+      "postalCode": "97166",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "3336693333",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.976867,
+        "lng": -89.572849
+      },
+      "originalCoordinates": {
+        "lat": 20.976867,
+        "lng": -89.572849
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-47",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Maya",
+      "neighborhood": "Miguel Alemán",
+      "address": "C. 26 X 17 No. 290",
+      "postalCode": "97148",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.991878,
+        "lng": -89.603157
+      },
+      "originalCoordinates": {
+        "lat": 20.991878,
+        "lng": -89.603157
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-48",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Monte Albán",
+      "neighborhood": "San Antonio Cucul",
+      "address": "C. 49 X 20 y 22 No. 485 Int. Loc. 7",
+      "postalCode": "97116",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.00875287,
+        "lng": -89.6184933
+      },
+      "originalCoordinates": {
+        "lat": 21.00875287,
+        "lng": -89.6184933
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-49",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Campestre",
+      "neighborhood": "Campestre",
+      "address": "C. 9 X 38 No. 269-B Int. Loc. 3",
+      "postalCode": "97120",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9999445100",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.008813,
+        "lng": -89.618495
+      },
+      "originalCoordinates": {
+        "lat": 21.008813,
+        "lng": -89.618495
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-50",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA San José Tecoh",
+      "neighborhood": "San José Tecoh",
+      "address": "C. 54 X 131 No. 848",
+      "postalCode": "97299",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9231,
+        "lng": -89.627539
+      },
+      "originalCoordinates": {
+        "lat": 20.9231,
+        "lng": -89.627539
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-51",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Mercado 52",
+      "neighborhood": "Mérida Centro",
+      "address": "C. 67 X 52 No. 483",
+      "postalCode": "97000",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.962528,
+        "lng": -89.618706
+      },
+      "originalCoordinates": {
+        "lat": 20.962528,
+        "lng": -89.618706
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-36",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Cinco Colonias",
+      "neighborhood": "Cinco Colonias",
+      "address": "C. 50 No. 923",
+      "postalCode": "97280",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9999324281",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9236801,
+        "lng": -89.6209673
+      },
+      "originalCoordinates": {
+        "lat": 20.9236801,
+        "lng": -89.6209673
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-37",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Jardines De Linda vista",
+      "neighborhood": "Jardines De Lindavista",
+      "address": "C. 40 Av. Merida 2000 No. 155",
+      "postalCode": "97219",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "3336693333",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.010892,
+        "lng": -89.653628
+      },
+      "originalCoordinates": {
+        "lat": 21.010892,
+        "lng": -89.653628
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-52",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Oriente",
+      "neighborhood": "Cortes Sarmiento",
+      "address": "C. 4 X 63-C No. 563",
+      "postalCode": "97168",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.960716,
+        "lng": -89.591768
+      },
+      "originalCoordinates": {
+        "lat": 20.960716,
+        "lng": -89.591768
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-53",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Polígono 108",
+      "neighborhood": "Polígono 108",
+      "address": "C. 31-A X 24 No. 377",
+      "postalCode": "97144",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.989428,
+        "lng": -89.574584
+      },
+      "originalCoordinates": {
+        "lat": 20.989428,
+        "lng": -89.574584
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-54",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Florida",
+      "neighborhood": "La Florida",
+      "address": "C. 17 X 26 Y 28 No. 204 Mza. 328 Int. Loc. 4 Y 5",
+      "postalCode": "97238",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.012203,
+        "lng": -89.572688
+      },
+      "originalCoordinates": {
+        "lat": 21.012203,
+        "lng": -89.572688
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-38",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. México",
+      "neighborhood": "México Norte",
+      "address": "C. 20 No. 57 Int. D",
+      "postalCode": "97128",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9673702,
+        "lng": -89.5925857
+      },
+      "originalCoordinates": {
+        "lat": 20.9673702,
+        "lng": -89.5925857
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-39",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. 43 Tanlum",
+      "neighborhood": "Pedregales De Tanlum",
+      "address": "C. 43 No. 381",
+      "postalCode": "97210",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0386642,
+        "lng": -89.6462052
+      },
+      "originalCoordinates": {
+        "lat": 21.0386642,
+        "lng": -89.6462052
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-55",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Parque Esperanza",
+      "neighborhood": "Esperanza",
+      "address": "C. 61 X 14 No. 308",
+      "postalCode": "97169",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.964578,
+        "lng": -89.596718
+      },
+      "originalCoordinates": {
+        "lat": 20.964578,
+        "lng": -89.596718
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-40",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Cupules",
+      "neighborhood": "Yucatán",
+      "address": "Av. Centenario Himno Nacional",
+      "postalCode": "97050",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9673702,
+        "lng": -89.5925857
+      },
+      "originalCoordinates": {
+        "lat": 20.9673702,
+        "lng": -89.5925857
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-41",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Av. 20 El Pedregal",
+      "neighborhood": "Pedregales De Tanlum",
+      "address": "C. 37 Diagonal No. 352",
+      "postalCode": "97210",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9982394,
+        "lng": -89.6264786
+      },
+      "originalCoordinates": {
+        "lat": 20.9982394,
+        "lng": -89.6264786
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-56",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA City Center",
+      "neighborhood": "San Ramón Norte",
+      "address": "C. 30 X 43 Y Anillo Periferico No. 185",
+      "postalCode": "97117",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.037992,
+        "lng": -89.60239
+      },
+      "originalCoordinates": {
+        "lat": 21.037992,
+        "lng": -89.60239
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-57",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Ciudad Industrial",
+      "neighborhood": "Ciudad Industrial",
+      "address": "C. 26 X 33 No. 448",
+      "postalCode": "97288",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.00532949,
+        "lng": -89.59068084
+      },
+      "originalCoordinates": {
+        "lat": 21.00532949,
+        "lng": -89.59068084
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-58",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Terminal",
+      "neighborhood": "Mérida Centro",
+      "address": "C. 50 X 67 No. 531 Int. Loc. 3",
+      "postalCode": "97000",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.962224,
+        "lng": -89.61763
+      },
+      "originalCoordinates": {
+        "lat": 20.962224,
+        "lng": -89.61763
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-59",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Cma",
+      "neighborhood": "Mérida Centro",
+      "address": "C. 54 X 33 No. 371",
+      "postalCode": "97000",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.983718,
+        "lng": -89.615973
+      },
+      "originalCoordinates": {
+        "lat": 20.983718,
+        "lng": -89.615973
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-42",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Chichen-Itza",
+      "neighborhood": "Nueva Chichen-Itzá",
+      "address": "C. 24 No. 644",
+      "postalCode": "97170",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9999869936",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9182205,
+        "lng": -89.6791894
+      },
+      "originalCoordinates": {
+        "lat": 20.9182205,
+        "lng": -89.6791894
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-60",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Tecnológico",
+      "neighborhood": "Felipe Carrillo Puerto",
+      "address": "C. 10 X 17-A No. 91",
+      "postalCode": "97209",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.013836,
+        "lng": -89.62437
+      },
+      "originalCoordinates": {
+        "lat": 21.013836,
+        "lng": -89.62437
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-43",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Av. 7 Cholul",
+      "neighborhood": "Santa Rita Cholul",
+      "address": "C. 7 No. 319",
+      "postalCode": "97130",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0281101,
+        "lng": -89.5709633
+      },
+      "originalCoordinates": {
+        "lat": 21.0281101,
+        "lng": -89.5709633
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-44",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Yucatan Arcos",
+      "neighborhood": "Residencial Los Pinos",
+      "address": "C. 17 No. 391",
+      "postalCode": "97138",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9996117521",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.0153145,
+        "lng": -89.6450269
+      },
+      "originalCoordinates": {
+        "lat": 21.0153145,
+        "lng": -89.6450269
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-61",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA 42 Sur",
+      "neighborhood": "San Nicolás",
+      "address": "C. 131 x 42 No. 196 No. 195",
+      "postalCode": "97147",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.927714,
+        "lng": -89.607705
+      },
+      "originalCoordinates": {
+        "lat": 20.927714,
+        "lng": -89.607705
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-62",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Cinco Colonias",
+      "neighborhood": "5 Colonias",
+      "address": "C. 50 X 137 No. 925",
+      "postalCode": "97280",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.923287,
+        "lng": -89.620798
+      },
+      "originalCoordinates": {
+        "lat": 20.923287,
+        "lng": -89.620798
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-63",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. YZA Caucel Nueva Creación",
+      "neighborhood": "Ciudad Caucel",
+      "address": "C. 37 D x 106 No. 826",
+      "postalCode": "97314",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "8002266992",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 21.005389,
+        "lng": -89.716154
+      },
+      "originalCoordinates": {
+        "lat": 21.005389,
+        "lng": -89.716154
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-45",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Circuito Colonias",
+      "neighborhood": "México",
+      "address": "C. 28 No. 132",
+      "postalCode": "97125",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9967077,
+        "lng": -89.6300421
+      },
+      "originalCoordinates": {
+        "lat": 20.9967077,
+        "lng": -89.6300421
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-46",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Libano",
+      "neighborhood": "México Norte",
+      "address": "C. 1-C No. 346",
+      "postalCode": "97128",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9673702,
+        "lng": -89.5925857
+      },
+      "originalCoordinates": {
+        "lat": 20.9673702,
+        "lng": -89.5925857
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F1003678-64",
+      "category": "farmacia",
+      "name": "Farmacon, S.A. de C.V. - Suc. Yza Tixcacal",
+      "neighborhood": "Tixcacal Opichén",
+      "address": "C. 26 No. 651 Int. E",
+      "postalCode": "97249",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "9999305795",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.953922,
+        "lng": -89.68508
+      },
+      "originalCoordinates": {
+        "lat": 20.953922,
+        "lng": -89.68508
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
+      ],
+      "active": false,
+      "bookingEnabled": false,
+      "virtualEnabled": false
+    },
+    {
+      "id": "F2020092-47",
+      "category": "farmacia",
+      "name": "Farmacia Guadalajara. S.A. de C.V. - Suc. Merida Yucatan Canek Bojorquez",
+      "neighborhood": "Mérida Centro",
+      "address": "C. 59 A No. 622",
+      "postalCode": "97000",
+      "municipality": "Mérida",
+      "specialty": "FARMACIAS EN GENERAL",
+      "phone": "",
+      "secondaryPhone": null,
+      "price": null,
+      "coordinates": {
+        "lat": 20.9827925,
+        "lng": -89.6529223
+      },
+      "originalCoordinates": {
+        "lat": 20.9827925,
+        "lng": -89.6529223
+      },
+      "coordinateIssue": null,
+      "photo": null,
+      "schedule": [
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59",
+        "00:00-23:59"
       ],
       "active": false,
       "bookingEnabled": false,
