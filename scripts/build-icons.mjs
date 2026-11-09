@@ -6,6 +6,7 @@ const ICONS = {
  // Una por categoría del directorio, más los controles de la barra lateral.
  category:'Category', pediatria:'Profile2user', 'medicina-general':'Health', hospital:'Hospital',
  laboratorio:'Drop', farmacia:'Shop', collapse:'SidebarLeft', expand:'ArrowRight2',
+ heart:'Heart', especialistas:'Health', servicios:'Health', list:'Menu', check:'TickCircle',
 };
 const symbols = [];
 for (const [id, name] of Object.entries(ICONS)) {

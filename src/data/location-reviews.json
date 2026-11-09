@@ -1,0 +1,22 @@
+{
+ "05643023": {
+  "originalAddress":"C. 26 No. 199",
+  "coordinates":{"lat":21.01606427,"lng":-89.584793623},
+  "checkedAt":"2026-11-08",
+  "sourceUrl":"https://www.waze.com/es/live-map/directions/hospital-star-medica-merida-calle-26-199?to=place.w.177209554.1772226614.598523",
+  "note":"Punto del hospital contrastado en Waze con nombre, calle y teléfono coincidentes. La coordenada de Bupa estaba en Morelia. Precisión de establecimiento, no de consultorio."
+ },
+ "05683920": {
+  "originalAddress":"C. 17 No. 104-A",
+  "conflict":true,
+  "checkedAt":"2026-11-08",
+  "sourceUrl":"https://www.hospitalesmac.com/hospitales/hospital/merida",
+  "note":"Bupa indica Calle 17 No. 104-A; el sitio actual de Hospital MAC Mérida indica Av. Correa Rachó No. 34. Confirma la sede con el hospital antes de viajar. Se oculta el punto para evitar dirigir a una sede equivocada."
+ },
+ "05687640": {
+  "originalAddress":"C. 24 No. S/N",
+  "checkedAt":"2026-11-08",
+  "sourceUrl":"https://www.christusmuguerza.com.mx/hospital-faro-del-mayab",
+  "note":"Dirección y teléfono coinciden con el sitio oficial del hospital. El punto sigue siendo el publicado por Bupa; no se ha verificado su acceso exacto."
+ }
+}

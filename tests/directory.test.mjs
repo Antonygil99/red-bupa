@@ -18,8 +18,14 @@ test('keeps declared activity and never enables booking for inactive profiles',(
 test('coordinates outside Mérida stay off the map but are preserved',()=>{
  const broken=data.providers.filter(p=>!p.coordinates);
  assert.ok(broken.every(p=>p.coordinateIssue&&p.originalCoordinates));
- assert.ok(broken.every(p=>!inArea(p.originalCoordinates.lat,p.originalCoordinates.lng)));
+ assert.ok(broken.every(p=>p.locationStatus==='conflict'||!inArea(p.originalCoordinates.lat,p.originalCoordinates.lng)));
  assert.ok(data.providers.every(p=>!p.coordinates||inArea(p.coordinates.lat,p.coordinates.lng)));
+});
+
+test('location corrections require evidence and preserve Bupa coordinates',()=>{
+ const reviewed=data.providers.filter(p=>p.locationStatus==='reviewed');
+ assert.ok(reviewed.every(p=>p.locationReview?.sourceUrl?.startsWith('https://')&&p.locationReview?.checkedAt&&p.originalCoordinates));
+ assert.ok(data.providers.filter(p=>p.locationStatus==='conflict').every(p=>!p.coordinates&&p.coordinateIssue));
 });
 test('accent-insensitive search',()=>{assert.equal(normalize('  MÉRIDA  '),'merida');assert.ok(normalize('Mónica Trujillo Salazar').includes(normalize('monica')));});
 test('distances are in kilometers and area excludes corrupt coordinate',()=>{assert.equal(distance([21,-89.6],[21,-89.6]),0);assert.ok(Math.abs(distance([21,-89.6],[21.01,-89.6])-1.112)<.01);assert.equal(inArea(89.6303005,-89.6280803),false);assert.equal(inArea(20.984,-89.619),true);assert.equal(inArea(19.4,-99.1),false);});

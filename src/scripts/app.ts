@@ -1,7 +1,11 @@
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import 'leaflet.markercluster';
+import 'leaflet.markercluster/dist/MarkerCluster.css';
+import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 import { gsap } from 'gsap';
-import directory from '../data/directory.json';
+import initialDirectory from '../data/directory.json';
+let directory=initialDirectory;
 import { AREA, CENTER, distance, inArea, normalize, scheduledNow } from '../lib/directory.mjs';
 
 type Provider = typeof directory.providers[number];
@@ -11,10 +15,11 @@ const MAPBOX_STYLE = (import.meta.env.PUBLIC_MAPBOX_STYLE || 'mapbox/light-v11')
 const ROUTING_PROFILE = (import.meta.env.PUBLIC_ROUTING_PROFILE || 'driving').trim();
 const PROFILE_LABEL: Record<string,string> = {walking:'a pie',cycling:'en bici',driving:'en auto','driving-traffic':'en auto'};
 
-const CATEGORIES = [{id:'all',label:'Toda la red',count:directory.providers.length}, ...directory.categories];
+let CATEGORIES = [{id:'all',label:'Toda la red',count:directory.providers.length}, ...directory.categories];
 const RADIUS_STEPS: (number|'all')[] = [1,2,5,10,'all'];
 const PREFS_KEY = 'myhealth:prefs';
 const POSITION_KEY = 'myhealth:position';
+const FAVORITES_KEY = 'myhealth:favorites';
 const POSITION_TTL = 12*60*60*1000;
 
 const $ = <T extends HTMLElement = HTMLElement>(id:string) => document.getElementById(id) as T;
@@ -27,6 +32,10 @@ const readStore = <T>(key:string):T|null => { try{ const raw=localStorage.getIte
 const writeStore = (key:string,value:unknown) => { try{ localStorage.setItem(key,JSON.stringify(value)); }catch{} };
 
 const saved = readStore<{category?:string;radius?:number;onlyScheduled?:boolean;collapsed?:boolean}>(PREFS_KEY) ?? {};
+const storedFavorites=readStore<unknown>(FAVORITES_KEY);
+let favorites=new Set<string>(Array.isArray(storedFavorites)?storedFavorites.filter((id):id is string=>typeof id==='string'):[]);
+let favoritesOnly=false;
+let specialtyFilter='all';
 let query = '';
 let category = CATEGORIES.some(c=>c.id===saved.category) ? saved.category! : 'all';
 let radiusIndex = typeof saved.radius==='number' && saved.radius>=0 && saved.radius<RADIUS_STEPS.length ? saved.radius : RADIUS_STEPS.length-1;
@@ -38,6 +47,7 @@ let locating = false;
 let map:L.Map|null=null, userMarker:L.Marker|null=null, rangeCircle:L.Circle|null=null;
 let routeLayer:L.Polyline|null=null, routing=false;
 let tileLayer:L.TileLayer|null=null;
+let clusterLayer:L.MarkerClusterGroup|null=null;
 const markers = new Map<string,L.Marker>();
 
 const radius = () => RADIUS_STEPS[radiusIndex];
@@ -67,8 +77,10 @@ function toast(message:string){
 }
 function matching(){
  return directory.providers.filter(p=>normalize(p.municipality)==='merida')
+ .filter(p=>!favoritesOnly||favorites.has(p.id))
+ .filter(p=>specialtyFilter==='all'||p.specialty===specialtyFilter)
  .filter(p=>category==='all'||p.category===category)
- .filter(p=>normalize(`${p.name} ${p.neighborhood} ${p.specialty}`).includes(normalize(query)))
+ .filter(p=>normalize(`${p.name} ${p.neighborhood} ${p.specialty} ${p.address}`).includes(normalize(query)))
  .filter(p=>!onlyScheduled||scheduledNow(p.schedule))
  .filter(p=>radius()==='all'||(km(p)!==null&&km(p)!<=Number(radius())))
  .sort((a,b)=>userPosition?(km(a)??Infinity)-(km(b)??Infinity)||a.name.localeCompare(b.name,'es'):a.name.localeCompare(b.name,'es'));
@@ -76,17 +88,22 @@ function matching(){
 function renderCategories(){
  $('categories').innerHTML=CATEGORIES.map(c=>`<button class="filter-chip category-chip cat-${escape(c.id)}" data-category="${escape(c.id)}" aria-pressed="${category===c.id}">${icon(c.id==='all'?'category':c.id)}${escape(c.label)}<em>${c.count}</em></button>`).join('');
  $('categories').querySelectorAll<HTMLButtonElement>('[data-category]').forEach(btn=>btn.onclick=()=>{
-  category=btn.dataset.category!;savePrefs();closeDetail();renderCategories();render();updateBounds();
+  category=btn.dataset.category!;specialtyFilter='all';$<HTMLSelectElement>('specialty-select').value='all';savePrefs();closeDetail();renderCategories();render();updateBounds();
  });
 }
 function render(){
  const providers=matching();
  $('result-count').textContent=`${providers.length} ${providers.length===1?'proveedor':'proveedores'} ${userPosition?'en tu búsqueda':'en Mérida'}`;
  $('sort-label').textContent=userPosition?'Por cercanía':'A–Z';
- $('results').innerHTML=providers.length?providers.map(p=>`<button class="provider" data-id="${escape(p.id)}" aria-pressed="${selected===p.id}" aria-label="Ver perfil de ${escape(p.name)}">${avatar(p)}<span class="provider-copy"><span class="provider-name">${escape(p.name)}</span><span class="provider-place">${escape(p.neighborhood)}</span><span class="provider-status">${!p.coordinates?'Ubicación por verificar':escape(specialty(p))}</span></span><span class="provider-distance">${km(p)!==null?km(p)!.toFixed(1)+' km':icon('arrow')}</span></button>`).join(''):`<div class="empty-state">${radius()!=='all'?'No encontramos proveedores dentro de esta distancia.':'No encontramos proveedores con estos filtros.'}<br/>Prueba otra colonia, otra categoría o amplía la distancia.<br/><button id="reset-filters">Restablecer filtros</button></div>`;
+ $('favorites-count').textContent=String(directory.providers.filter(p=>favorites.has(p.id)).length);
+ $('favorites-note').hidden=!favoritesOnly;
+ $('browse-all').setAttribute('aria-pressed',String(!favoritesOnly));
+ $('browse-favorites').setAttribute('aria-pressed',String(favoritesOnly));
+ $('results').innerHTML=providers.length?providers.map(p=>`<article class="provider-row"><button class="provider" data-id="${escape(p.id)}" aria-pressed="${selected===p.id}" aria-label="Ver perfil de ${escape(p.name)}">${avatar(p)}<span class="provider-copy"><span class="provider-specialty cat-${escape(p.category)}">${escape(specialty(p))}</span><span class="provider-name">${escape(p.name)}</span><span class="provider-place">${escape(p.neighborhood)}</span><span class="provider-status ${!p.coordinates?'needs-review':''}">${!p.coordinates?'Ubicación por confirmar':p.locationStatus==='reviewed'?'Punto contrastado · establecimiento':'Punto del directorio Bupa'}${km(p)!==null?' · '+km(p)!.toFixed(1)+' km en línea recta':''}</span></span></button><button class="favorite-button" data-favorite="${escape(p.id)}" aria-pressed="${favorites.has(p.id)}" aria-label="${favorites.has(p.id)?'Quitar de':'Guardar en'} favoritos: ${escape(p.name)}">${icon('heart')}</button></article>`).join(''):`<div class="empty-state">${icon(favoritesOnly?'heart':'search')}<h3>${favoritesOnly?'Tu red personal empieza aquí':'Sin resultados por ahora'}</h3><p>${favoritesOnly?'Guarda a tu pediatra, farmacia u hospital con el corazón de cada ficha. Si ya tienes favoritos, prueba a quitar los filtros.':'Prueba otro nombre, colonia o especialidad, o amplía la distancia.'}</p><button id="reset-filters">${favoritesOnly?'Explorar toda la red':'Limpiar filtros'}</button></div>`;
  $('results').querySelectorAll<HTMLButtonElement>('[data-id]').forEach(btn=>btn.onclick=()=>selectProvider(btn.dataset.id!));
+ $('results').querySelectorAll<HTMLButtonElement>('[data-favorite]').forEach(btn=>btn.onclick=()=>toggleFavorite(btn.dataset.favorite!));
  if(document.getElementById('reset-filters'))$('reset-filters').onclick=()=>{
-  query='';category='all';radiusIndex=RADIUS_STEPS.length-1;onlyScheduled=false;
+  query='';category='all';specialtyFilter='all';favoritesOnly=false;$<HTMLSelectElement>('specialty-select').value='all';radiusIndex=RADIUS_STEPS.length-1;onlyScheduled=false;
   $<HTMLInputElement>('search').value='';$<HTMLInputElement>('radius').value=String(radiusIndex);
   $('radius-value').textContent=radiusLabel();paintSlider();$('schedule-filter').setAttribute('aria-pressed','false');
   savePrefs();renderCategories();render();updateBounds();
@@ -98,9 +115,27 @@ function render(){
  const present=CATEGORIES.filter(c=>c.id!=='all'&&located.some(p=>p.category===c.id));
  $('map-legend').innerHTML=present.map(c=>`<span class="legend-item"><span class="legend-dot cat-${escape(c.id)}"></span>${escape(c.label)}</span>`).join('')||'<span class="legend-item">Sin ubicaciones visibles</span>';
 }
+function toggleFavorite(id:string){
+ const p=directory.providers.find(p=>p.id===id);if(!p)return;
+ const adding=!favorites.has(id);
+ if(adding)favorites.add(id);else favorites.delete(id);
+ writeStore(FAVORITES_KEY,[...favorites]);
+ const persisted=readStore<unknown>(FAVORITES_KEY);
+ toast(Array.isArray(persisted)&&persisted.includes(id)===adding?(adding?'Guardado en tus favoritos.':'Eliminado de tus favoritos.'):'Cambio temporal: este navegador no permite guardar favoritos.');
+ render();
+ const button=document.getElementById('detail-favorite');
+ if(button){button.setAttribute('aria-pressed',String(favorites.has(id)));button.innerHTML=icon('heart')+(favorites.has(id)?'Guardado en favoritos':'Guardar en favoritos');}
+ $('results').querySelector<HTMLButtonElement>(`[data-favorite="${id}"]`)?.focus({preventScroll:true});
+}
+function showFavorites(value:boolean){
+ favoritesOnly=value;query='';category='all';specialtyFilter='all';radiusIndex=4;onlyScheduled=false;
+ $<HTMLInputElement>('search').value='';$<HTMLSelectElement>('specialty-select').value='all';
+ $<HTMLInputElement>('radius').value='4';$('radius-value').textContent=radiusLabel();paintSlider();
+ $('schedule-filter').setAttribute('aria-pressed','false');closeDetail();renderCategories();render();setView(false);updateBounds();
+}
 function setView(showMap:boolean){
  $('app-shell').classList.toggle('map-view',showMap);
- $('show-list').setAttribute('aria-pressed',String(!showMap));$('show-map').setAttribute('aria-pressed',String(showMap));
+ $('show-list').setAttribute('aria-pressed',String(!showMap&&!favoritesOnly));$('show-favorites').setAttribute('aria-pressed',String(!showMap&&favoritesOnly));$('show-map').setAttribute('aria-pressed',String(showMap));
  if(showMap)requestAnimationFrame(()=>{map?.invalidateSize();if(selected){const p=directory.providers.find(p=>p.id===selected);if(p?.coordinates)map?.panTo([p.coordinates.lat,p.coordinates.lng],{animate:!reduced.matches});}});
 }
 function setCollapsed(value:boolean){
@@ -115,11 +150,11 @@ function setCollapsed(value:boolean){
 }
 function updateMarkers(providers:Provider[]){
  if(!map)return;
- markers.forEach(m=>m.remove());markers.clear();
+ clusterLayer?.clearLayers();markers.clear();
  providers.forEach(p=>{if(!p.coordinates)return;
  const marker=L.marker([p.coordinates.lat,p.coordinates.lng],{icon:L.divIcon({className:`clinic-marker cat-${p.category}${selected===p.id?' selected':''}`,html:`<span class="pin-bubble">${icon(p.category)}</span>`,iconSize:[40,40],iconAnchor:[20,40]}),title:p.name,alt:`${specialty(p)}: ${p.name}`,keyboard:true,zIndexOffset:selected===p.id?1000:0});
  const tip=document.createElement('span');tip.textContent=p.name;
- marker.bindTooltip(tip,{direction:'top',offset:[0,-38]}).on('click',()=>selectProvider(p.id)).addTo(map!);markers.set(p.id,marker);
+ marker.bindTooltip(tip,{direction:'top',offset:[0,-38]}).on('click',()=>selectProvider(p.id));clusterLayer?.addLayer(marker);markers.set(p.id,marker);
  });
 }
 function clearRoute(){routeLayer?.remove();routeLayer=null;}
@@ -134,6 +169,10 @@ function selectProvider(id:string){
   : 'Actividad pendiente de confirmar. Llama para verificar atención, horario y costo. No hay agenda en línea.';
  $('detail').innerHTML=`<button class="detail-close icon-button" id="close-detail" aria-label="Cerrar perfil">${icon('close')}</button><div class="detail-top">${avatar(p)}<div><h2>${escape(p.name)}</h2><p>${escape(specialty(p))} · ${escape(p.neighborhood)}</p></div></div><div class="detail-section">${icon('pin')}<div><p>${escape(p.address)}</p><small>${escape(p.neighborhood)} · C.P. ${escape(p.postalCode)} · Mérida${km(p)!==null?`<br/>A ${km(p)!.toFixed(1)} km de ti · En línea recta`:''}</small>${!p.coordinates?'<p><strong>Ubicación por verificar</strong></p><small>La coordenada del directorio no corresponde a Mérida. Confirma la dirección antes de ir.</small>':''}</div></div><div class="detail-section">${icon('clock')}<div><strong>Horarios del directorio</strong><table class="hours" aria-label="Horario semanal"><tbody>${days.map((day,i)=>`<tr><td>${day}</td><td>${escape(p.schedule[i]||'Sin horario registrado')}</td></tr>`).join('')}</tbody></table></div></div><div class="detail-note">${escape(note)}</div><div class="detail-actions">${phone?`<a class="primary-button" href="tel:+52${escape(phone)}">${icon('phone')}Llamar ${escape(phone.replace(/(\d{3})(\d{3})(\d{4})/,'$1 $2 $3'))}</a>`:''}${p.coordinates?`<button class="secondary-button" id="route-button">${icon('route')}Cómo llegar</button>`:''}</div><p class="route-summary" id="route-summary" role="status" aria-live="polite" hidden></p>`;
  $('detail').hidden=false;clearRoute();
+ const verification=document.createElement('div');verification.className='location-verification';
+ verification.innerHTML=`<strong>${p.locationStatus==='reviewed'?'Punto contrastado con otra fuente':!p.coordinates?'Ubicación por confirmar':'Coordenada del directorio Bupa'}</strong><p>${escape(p.locationReview?.note||p.coordinateIssue||'El punto está dentro de la zona de Mérida. Su precisión y acceso exacto no han sido verificados de forma independiente.')}</p>${p.locationReview?.sourceUrl?`<a href="${escape(p.locationReview.sourceUrl)}" target="_blank" rel="noopener noreferrer">Ver fuente de la revisión ↗</a>`:''}`;
+ const saveButton=document.createElement('button');saveButton.id='detail-favorite';saveButton.className='detail-save';saveButton.setAttribute('aria-pressed',String(favorites.has(p.id)));saveButton.innerHTML=icon('heart')+(favorites.has(p.id)?'Guardado en favoritos':'Guardar en favoritos');saveButton.onclick=()=>toggleFavorite(p.id);
+ $('detail').querySelector('.detail-top')!.after(saveButton,verification);
  if(document.getElementById('route-button'))$('route-button').onclick=()=>{drawRoute(p);};
  $('close-detail').onclick=()=>{closeDetail();render();const trigger=$('results').querySelector<HTMLButtonElement>(`[data-id="${id}"]`);if(matchMedia('(max-width:760px)').matches){setView(false);$('show-list').focus();}else trigger?.focus();};
  render();setView(true);
@@ -154,7 +193,7 @@ async function drawRoute(p:Provider){
  };
  if(!MAPBOX_TOKEN){
   show([userPosition,target],true);
-  summary.hidden=false;summary.textContent='Falta configurar PUBLIC_MAPBOX_TOKEN en .env para calcular rutas. Mientras tanto mostramos la línea recta, no un trayecto real.';
+  summary.hidden=false;summary.textContent='Ruta no disponible. La línea punteada indica la distancia en línea recta; confirma la dirección antes de salir.';
   return;
  }
  if(routing)return;
@@ -204,7 +243,7 @@ function applyPosition(position:[number,number]){
 function storedPosition():[number,number]|null{
  const value=readStore<{lat:number;lng:number;ts:number}>(POSITION_KEY);
  if(!value||typeof value.lat!=='number'||typeof value.lng!=='number')return null;
- if(Date.now()-value.ts>POSITION_TTL||!inArea(value.lat,value.lng))return null;
+ if(!Number.isFinite(value.ts)||value.ts>Date.now()||Date.now()-value.ts>POSITION_TTL||!inArea(value.lat,value.lng))return null;
  return [value.lat,value.lng];
 }
 function locate({silent=false}={}){
@@ -242,11 +281,13 @@ function initMap(){
   map=L.map('map',{zoomControl:false,attributionControl:true,minZoom:11,maxZoom:18,maxBounds:AREA as L.LatLngBoundsLiteral,maxBoundsViscosity:1}).setView(CENTER as [number,number],13);
   tileLayer=MAPBOX_TOKEN
    ? L.tileLayer(`https://api.mapbox.com/styles/v1/${MAPBOX_STYLE}/tiles/512/{z}/{x}/{y}@2x?access_token=${encodeURIComponent(MAPBOX_TOKEN)}`,{attribution:'&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',tileSize:512,zoomOffset:-1,maxZoom:19})
-   : L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',subdomains:'abcd',maxZoom:19});
+   : L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',maxZoom:19});
   let successes=0,errors=0;
   tileLayer.on('tileload',()=>{successes++;if(successes>errors)$('map-message').hidden=true;});
   tileLayer.on('tileerror',()=>{errors++;if(errors>=3)$('map-message').hidden=false;});
   tileLayer.addTo(map);
+  clusterLayer=L.markerClusterGroup({showCoverageOnHover:false,maxClusterRadius:48,spiderfyOnMaxZoom:true,zoomToBoundsOnClick:true,animate:!reduced.matches});
+  clusterLayer.addTo(map);
   const located=directory.providers.filter(p=>p.coordinates);
   if(located.length)map.fitBounds(L.latLngBounds(located.map(p=>[p.coordinates!.lat,p.coordinates!.lng] as [number,number])),{paddingTopLeft:[55,115],paddingBottomRight:[75,100],maxZoom:13,animate:false});
   $('retry-map').onclick=()=>{successes=0;errors=0;$('map-message').hidden=true;tileLayer?.redraw();};
@@ -272,8 +313,10 @@ document.querySelectorAll<HTMLButtonElement>('.rail [data-expand]').forEach(btn=
  requestAnimationFrame(()=>(target.querySelector('button')??target).focus());
 });
 $('zoom-in').onclick=()=>map?.zoomIn();$('zoom-out').onclick=()=>map?.zoomOut();
-$('show-list').onclick=()=>setView(false);$('show-map').onclick=()=>setView(true);
-const dialog=$<HTMLDialogElement>('help-dialog');$('help-button').onclick=()=>dialog.showModal();['close-help','got-it'].forEach(id=>$(id).onclick=()=>dialog.close());
+$('show-list').onclick=()=>showFavorites(false);$('show-map').onclick=()=>setView(true);
+$('show-favorites').onclick=()=>showFavorites(true);$('browse-all').onclick=()=>showFavorites(false);$('browse-favorites').onclick=()=>showFavorites(true);
+$<HTMLSelectElement>('specialty-select').onchange=e=>{specialtyFilter=(e.target as HTMLSelectElement).value;category='all';closeDetail();renderCategories();render();};
+const dialog=$<HTMLDialogElement>('help-dialog');$('help-button').onclick=()=>dialog.showModal();$('sidebar-help').onclick=()=>dialog.showModal();['close-help','got-it'].forEach(id=>$(id).onclick=()=>dialog.close());
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&selected&&!dialog.open)$('close-detail')?.click();});
 window.addEventListener('offline',()=>{toast('Sin conexión. Puedes consultar los perfiles; el mapa puede estar incompleto.');$('map-message').hidden=false;});
 window.addEventListener('online',()=>{toast('Conexión recuperada.');tileLayer?.redraw();});
@@ -289,6 +332,7 @@ const remembered=storedPosition();
 if(remembered)applyPosition(remembered);
 renderCategories();render();
 if(remembered)updateBounds();
+updateDataDate();
 // Si el permiso ya estaba concedido, se refresca sin volver a preguntar.
 navigator.permissions?.query({name:'geolocation'}).then(status=>{if(status.state==='granted')locate({silent:true});}).catch(()=>{});
 
@@ -305,6 +349,28 @@ function dismissLoader(){
   .to('.loader-logo',{y:-16,opacity:0,duration:.35,ease:'power2.in'},'-=.15')
   .to(loader,{yPercent:-100,duration:.75,ease:'power3.inOut'},'-=.1');
 }
+
+function updateDataDate(){
+ const date=new Date(directory.updatedAt);
+ $('data-updated').textContent=Number.isFinite(date.getTime())?'Consultado '+new Intl.DateTimeFormat('es-MX',{day:'numeric',month:'short',year:'numeric',timeZone:'America/Merida'}).format(date)+' · Revisión mensual':'Fuente: directorio Bupa';
+}
+// La copia publicada en GitHub permite actualizar los datos aunque el sitio no se reconstruya.
+async function refreshDirectory(){
+ try{
+  const response=await fetch('https://raw.githubusercontent.com/Antonygil99/red-bupa/main/public/data/directory.json',{signal:AbortSignal.timeout(8000)});
+  if(!response.ok)return;
+  const next=await response.json();
+  if(!Array.isArray(next.providers)||!next.providers.length||!Array.isArray(next.categories)||!Array.isArray(next.specialties)||!next.updatedAt)return;
+  if(new Date(next.updatedAt)<=new Date(directory.updatedAt))return;
+  if(!next.providers.every((p:Provider)=>typeof p.id==='string'&&typeof p.name==='string'&&typeof p.specialty==='string'&&typeof p.neighborhood==='string'&&typeof p.address==='string'&&Array.isArray(p.schedule)&&(!p.coordinates||inArea(p.coordinates.lat,p.coordinates.lng))))return;
+  directory=next;CATEGORIES=[{id:'all',label:'Toda la red',count:directory.providers.length},...directory.categories];
+  if(!CATEGORIES.some(c=>c.id===category))category='all';
+  $('specialty-select').innerHTML='<option value="all">Todas las especialidades</option>'+directory.specialties.map(s=>`<option value="${escape(s)}">${escape(s)}</option>`).join('');
+  specialtyFilter='all';closeDetail();renderCategories();render();updateDataDate();
+ }catch{/* La copia incluida con el sitio sigue disponible cuando falla la actualización. */}
+}
+void refreshDirectory();
+window.addEventListener('storage',e=>{if(e.key===FAVORITES_KEY){const value=readStore<unknown>(FAVORITES_KEY);favorites=new Set(Array.isArray(value)?value.filter((id):id is string=>typeof id==='string'):[]);render();}});
 const pageReady=document.readyState==='complete'
  ? Promise.resolve()
  : new Promise<void>(resolve=>window.addEventListener('load',()=>resolve(),{once:true}));

@@ -8,6 +8,7 @@ import directory from '../data/directory.json';
 <html lang="es-MX">
  <head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="theme-color" content="#111f33"/><meta name="description" content="Directorio médico de la red en Mérida: pediatría, medicina general, hospitales y laboratorios cerca de tu ubicación."/><title>myhealth · Directorio médico en Mérida</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"/></head>
  <body>
+  <a class="skip-link" href="#results">Ir a los resultados</a>
   <div id="loader" class="loader" role="status" aria-live="polite">
    <img src="/loader_logo.svg" alt="myhealth" width="101" height="24" class="loader-logo"/>
    <span class="loader-bar"><span></span></span>
@@ -26,18 +27,22 @@ import directory from '../data/directory.json';
      <button class="icon-button" data-expand="radius" aria-label="Abrir distancia"><svg><use href="#i-locate"/></svg></button>
     </div>
     <div class="sidebar-body">
+     <div class="directory-intro"><span class="eyebrow">TU RED DE CUIDADO</span><h1>Tu salud, más cerca.</h1><p>Encuentra a quién acudir en Mérida.</p></div>
      <div class="location-box"><svg><use href="#i-pin"/></svg><div><span>ESTÁS EXPLORANDO</span><strong id="location-label">Mérida, Yucatán</strong></div><button id="sidebar-locate" class="icon-button" aria-label="Usar mi ubicación"><svg><use href="#i-locate"/></svg></button></div>
+     <div class="directory-nav" role="group" aria-label="Directorio o favoritos"><button id="browse-all" aria-pressed="true">Explorar la red</button><button id="browse-favorites" aria-pressed="false"><svg><use href="#i-heart"/></svg>Favoritos <span id="favorites-count">0</span></button></div>
      <div class="controls">
-      <div class="radius-row"><label for="radius">Distancia</label><output id="radius-value" for="radius">Todo Mérida</output></div>
+      <label class="specialty-label" for="specialty-select">Especialidad o servicio</label><select id="specialty-select"><option value="all">Todas las especialidades</option>{directory.specialties.map(s=><option value={s}>{s}</option>)}</select>
+      <details class="distance-options"><summary>Distancia y horario <span>+ filtros</span></summary><div class="radius-row"><label for="radius">Distancia</label><output id="radius-value" for="radius">Todo Mérida</output></div>
       <input id="radius" class="radius-slider" type="range" min="0" max="4" step="1" value="4" list="radius-stops" aria-describedby="radius-help"/>
       <datalist id="radius-stops"><option value="0" label="1 km"></option><option value="1" label="2 km"></option><option value="2" label="5 km"></option><option value="3" label="10 km"></option><option value="4" label="Todo"></option></datalist>
       <button id="schedule-filter" class="filter-chip schedule-chip" aria-pressed="false"><svg><use href="#i-clock"/></svg>Abierto ahora</button>
-      <p id="radius-help" class="quiet-note">Activa tu ubicación para calcular distancias.</p>
+      <p id="radius-help" class="quiet-note">Activa tu ubicación para calcular distancias.</p></details>
      </div>
     </div>
     <div class="results-heading"><h2 id="result-count">Proveedores en Mérida</h2><span id="sort-label">A–Z</span></div>
+    <p id="favorites-note" class="favorites-note" hidden>Tu red personal, guardada en este navegador. Usa el corazón de cada ficha para añadir o quitar favoritos.</p>
     <div id="results" class="results" aria-label="Resultados del directorio"></div>
-    <footer class="sidebar-footer"><svg><use href="#i-info"/></svg><span>Directorio de consulta. Confirma por teléfono.</span><img class="footer-mark" src="/span-footer-mark.svg" alt="" width="40" height="33" decoding="async"/></footer>
+    <footer class="sidebar-footer"><span><a href="https://www.bupasalud.com.mx/salud.php" target="_blank" rel="noopener noreferrer">Datos del directorio Bupa ↗</a><small id="data-updated">Actualizando directorio…</small></span><button id="sidebar-help" class="icon-button" aria-label="Acerca del directorio"><svg><use href="#i-info"/></svg></button></footer>
    </aside>
    <main class="map-panel" aria-label="Mapa de la red médica">
     <div id="map" aria-label="Mapa interactivo de Mérida"></div>
@@ -53,7 +58,7 @@ import directory from '../data/directory.json';
     <div class="filters" id="categories" role="group" aria-label="Tipo de servicio"></div>
    </div>
   </div>
-  <div class="mobile-tabs" role="group" aria-label="Vista"><button id="show-list" aria-pressed="true">Lista</button><button id="show-map" aria-pressed="false"><svg><use href="#i-pin"/></svg>Mapa</button></div>
+  <div class="mobile-tabs" role="group" aria-label="Vista"><button id="show-list" aria-pressed="true"><svg><use href="#i-list"/></svg>Explorar</button><button id="show-map" aria-pressed="false"><svg><use href="#i-pin"/></svg>Mapa</button><button id="show-favorites" aria-pressed="false"><svg><use href="#i-heart"/></svg>Favoritos</button></div>
   <div id="toasts" class="toasts" role="status" aria-live="polite" aria-atomic="false"></div>
   <dialog id="help-dialog"><button id="close-help" class="dialog-close icon-button" aria-label="Cerrar ayuda"><svg><use href="#i-close"/></svg></button><span class="eyebrow">CONOCE MYHEALTH</span><h2>Encuentra. Ubica. Contacta.</h2><p>Explora la red médica de Mérida por categoría —pediatría, medicina general, hospitales, laboratorios y farmacias—, selecciona un perfil y consulta sus datos de contacto.</p><p>Si compartes tu ubicación, ordenamos por cercanía y la guardamos en este dispositivo para no volver a preguntarte. Las distancias de la lista son en línea recta; «Cómo llegar» traza la ruta sobre el mapa.</p><p>Los horarios provienen del directorio y no garantizan atención. La mayoría de los perfiles tiene la actividad pendiente de confirmar y no hay agenda de citas en línea.</p><p class="dialog-notice">{directory.notice}</p><button id="got-it" class="primary-button">Entendido</button></dialog>
   <noscript><div class="noscript">Activa JavaScript para consultar el mapa y el directorio.</div></noscript>
